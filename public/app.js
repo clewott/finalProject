@@ -1,10 +1,11 @@
 (function () {
     "use strict";
 
-    angular.module('baby-mean',[
+    angular.module('finalProject',[
     "ngRoute",
     "ngCookies",
-    "posts"
+    "posts",
+    "companies"
     ])
     .config(function ($routeProvider) {
         $routeProvider
