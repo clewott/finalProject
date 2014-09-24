@@ -14,19 +14,26 @@
 
             $scope.createCompany = function (newCompany) {
                 companiesSvc.createCompany(newCompany);
-                $location.path('/companies');
+                $location.path('/companies/list');
             };
 
             $scope.editCompany = function (company) {
                 companiesSvc.editCompany(company);
-                $location.path('/companies');
+                $location.path('/companies/list');
             };
 
             $scope.deleteCompany = function (id) {
                 companiesSvc.deleteCompany(id);
-                $location.path('/companies');
+                $location.path('/companies/list');
             }
 
+            $scope.map = {
+              center: {
+                latitude: 32.7833,
+                longitude: -79.9333
+              },
+              zoom: 11
+            }
 
         }]);
 })();

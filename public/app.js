@@ -4,8 +4,10 @@
     angular.module('finalProject',[
     "ngRoute",
     "ngCookies",
-    "posts",
-    "companies"
+    "google-maps",
+    "companies",
+    "jobs",
+    "events"
     ])
     .config(function ($routeProvider) {
         $routeProvider

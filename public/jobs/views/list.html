@@ -1,0 +1,10 @@
+<a href="#/"><button>Home</button></a>
+<a href="#/jobs/new"><button>Add Job</button></a>
+This is the jobs view list
+Search: <input ng-model="query">
+<section data-ng-repeat="job in jobs | filter:query">
+    <h2>{{job.title}}</h2>
+    <p>{{job.company}}</p>
+    <a ng-href="{{job.url}}" target="_blank">{{job.url}}</a>
+    <p>{{job.email}}</p>
+</section>

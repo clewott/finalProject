@@ -1,6 +1,11 @@
+<a href="#/"><button>Home</button></a>
+<a href="#/companies/map"><button>Map View</button></a>
 <a href="#/companies/new" class="btn btn-success">Add Company</a>
-<section data-ng-repeat="company in companies">
+Search: <input ng-model="query">
+<section data-ng-repeat="company in companies | orderBy:'title' | filter:query">
     <h2>{{company.title}}</h2>
-    <p>{{company.content}}</p>
-    <a href="#/companies/{{company._id}}">view more</a>
+    <a ng-href="{{company.url}}" target="_blank">{{company.url}}</a>
+    <p>{{company.location}}</p>
+    <p>{{company.phoneNumber}}</p>
+    <p>{{company.email}}</p>
 </section>

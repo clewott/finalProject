@@ -7,7 +7,11 @@
         ])
         .config(function ($routeProvider) {
             $routeProvider
-                .when('/companies', {
+                .when('/companies/map', {
+                    templateUrl: 'companies/views/map.html',
+                    controller: 'companiesCtrl'
+                })
+                .when('/companies/list', {
                     templateUrl: 'companies/views/list.html',
                     controller: 'companiesCtrl'
                 })
