@@ -27,6 +27,7 @@
                 $location.path('/companies/list');
             }
 
+            //Default location
             $scope.map = {
               center: {
                 latitude: 32.7833,
@@ -34,6 +35,43 @@
               },
               zoom: 11
             }
+            $scope.options = {scrollwheel: true};
+
+            $scope.companyMarkers = [{
+              id:0,
+              coords: {
+                latitude: 32.7833,
+                longitude: -79.9333
+              }
+              }];
+
+            $scope.addMarker = function (marker) {
+               var idKey = $scope.companyMarkers.lenth ? 0 : $scope.companyMarkers.length;
+
+                $scope.companyMarkers.push({
+                    id: idKey,
+                    coords: {
+                    latitude: $scope.marker.markerLat,
+                    longitude: $scope.marker.markerLng
+                  }
+                });
+
+
+
+                console.log('Maker add: ' + $scope.companyMarkers);
+                $scope.markerLat ="";
+                $scope.markerLng ="";
+            };
+
+
+
+            $scope.marker = {
+              id:0,
+              coords: {
+                latitude: 32.7833,
+                longitude: -79.9333
+              }
+              }
 
         }]);
 })();

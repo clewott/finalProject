@@ -2,4 +2,12 @@
 <a href="#/companies/list"><button>List View</button></a>
 <a href="#/companies/new"><button>Add Company</button></a>
 Search: <input ng-model="query">
-<google-map center="map.center" zoom="map.zoom"></google-map>
+
+<form>
+  <input type="number" class="" ng-model="marker.markerLat" step="any" required="">
+  <input type="number" class="" ng-model="marker.markerLng" step="any" required="">
+  <button class="button" ng-click="addMarker(marker)">Add</button>
+</form>
+<google-map center="map.center" zoom="map.zoom" options="options" draggable="true">
+  <markers models="companyMarkers" coords="'coords'"></markers>
+</google-map>
