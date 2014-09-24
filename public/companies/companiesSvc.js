@@ -11,8 +11,11 @@
                 getCompany: getCompany,
                 createCompany: createCompany,
                 editCompany: editCompany,
-                deleteCompany: deleteCompany
+                deleteCompany: deleteCompany,
+                companyMarkers: companyMarkers
             };
+
+            var companyMarkers = [];
 
             function getCompanies() {
 

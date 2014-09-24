@@ -37,16 +37,10 @@
             }
             $scope.options = {scrollwheel: true};
 
-            $scope.companyMarkers = [{
-              id:0,
-              coords: {
-                latitude: 32.7833,
-                longitude: -79.9333
-              }
-              }];
+            $scope.companyMarkers = [];
 
             $scope.addMarker = function (marker) {
-               var idKey = $scope.companyMarkers.lenth ? 0 : $scope.companyMarkers.length;
+               var idKey = $scope.companyMarkers.length ? 0 : $scope.companyMarkers.length;
 
                 $scope.companyMarkers.push({
                     id: idKey,

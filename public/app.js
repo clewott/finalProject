@@ -7,7 +7,8 @@
     "google-maps",
     "companies",
     "jobs",
-    "events"
+    "events",
+    "app-directives"
     ])
     .config(function ($routeProvider) {
         $routeProvider
