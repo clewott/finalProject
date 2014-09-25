@@ -4,7 +4,7 @@
 Search: <input ng-model="query">
 <section data-ng-repeat="company in companies | orderBy:'title' | filter:query">
     <h2>{{company.title}}</h2>
-    <a ng-href="{{company.url}}" target="_blank">{{company.url}}</a>
+    <a ng-href="http://{{company.url}}" target="_blank">{{company.url}}</a>
     <p>{{company.location}}</p>
     <p>{{company.phoneNumber}}</p>
     <p>{{company.email}}</p>
