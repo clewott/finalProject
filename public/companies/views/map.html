@@ -21,4 +21,6 @@ Search: <input ng-model="query">
   <input id="address" type="text" ng-model="address" placeholder="Charleston, SC">
   <input type="button" value="Geocode" ng-click="codeAddress()">
 </div>
-<div id="map-canvas"></div>
+<div id="map-canvas" ng-repeat="company in companies">
+
+</div>

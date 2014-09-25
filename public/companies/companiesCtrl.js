@@ -4,6 +4,8 @@
     angular
         .module('companies')
         .controller('companiesCtrl', ['$scope', 'companiesSvc', '$location', '$routeParams', function ($scope, companiesSvc, $location, $routeParams) {
+
+
             companiesSvc.getCompanies().success(function (companies) {
                 $scope.companies = companies;
             });
@@ -14,6 +16,7 @@
 
             $scope.createCompany = function (newCompany) {
                 companiesSvc.createCompany(newCompany);
+                console.log(newCompany);
                 $location.path('/companies/list');
             };
 
@@ -39,26 +42,28 @@
               map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
             }
 
-            $scope.codeAddress = function () {
-              var address = document.getElementById('address').value;
+            $scope.$on('$routeChangeStart', function(next, current) {
+              var address = document.getElementById('streetAddress').value;
               console.log(address);
               geocoder.geocode( { 'address': address}, function(results, status) {
+              for(i = 0; i < $scope.companies.length; i++) {
                 if (status == google.maps.GeocoderStatus.OK) {
-                  map.setCenter(results[0].geometry.location);
+                  map.setCenter(results[i].geometry.location);
                   var marker = new google.maps.Marker({
                       map: map,
-                      position: results[0].geometry.location
+                      position: results[i].geometry.location
                   });
                 } else {
                   alert('Geocode was not successful for the following reason: ' + status);
                 }
+              }
               });
-            }
+            })
 
             google.maps.event.addDomListener(window, 'load', initialize);
 
             // $scope.$on('$routeChangeStart', function(next, current) {
-            //   initialize();
+            //   function initialize();
             // });
 
         }]);
