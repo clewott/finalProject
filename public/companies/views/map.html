@@ -12,8 +12,13 @@ Search: <input ng-model="query">
   <markers models="companyMarkers" coords="'coords'"></markers>
 </google-map> -->
 
-<div id="panel" onload="initialize()">
+<!-- <div id="panel" onload="initialize()">
   <input id="address" type="textbox" ng-model="location.address" placeholder="Charleston, SC">
   <input type="button" value="Geocode" ng-click="codeAddress(location)">
 </div>
-<google-map center="map.center" zoom="map.zoom" draggable="true" id="map-canvas"></google-map>
+<google-map center="map.center" zoom="map.zoom" draggable="true" id="map-canvas"></google-map> -->
+<div id="panel">
+  <input id="address" type="text" ng-model="address" placeholder="Charleston, SC">
+  <input type="button" value="Geocode" ng-click="codeAddress()">
+</div>
+<div id="map-canvas"></div>

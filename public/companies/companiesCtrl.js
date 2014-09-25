@@ -27,50 +27,22 @@
                 $location.path('/companies/list');
             }
 
-            //Default location
-            $scope.map = {
-              center: {
-                latitude: 32.7833,
-                longitude: -79.9333
-              },
-              zoom: 11
-            }
-            // $scope.options = {scrollwheel: true};
-            //
-            // $scope.companyMarkers = [];
-            //
-            // $scope.addMarker = function (marker) {
-            //    var idKey = $scope.companyMarkers.length ? 0 : $scope.companyMarkers.length;
-            //
-            //     $scope.companyMarkers.push({
-            //         id: idKey,
-            //         coords: {
-            //         latitude: $scope.marker.markerLat,
-            //         longitude: $scope.marker.markerLng
-            //       }
-            //     });
-            //
-            //     console.log('Maker add: ' + $scope.companyMarkers);
-            //     $scope.markerLat ="";
-            //     $scope.markerLng ="";
-            // };
-
             var geocoder;
             var map;
-            $scope.initialize = function () {
+            function initialize() {
               geocoder = new google.maps.Geocoder();
               var latlng = new google.maps.LatLng(32.7833, -79.9333);
               var mapOptions = {
                 zoom: 11,
                 center: latlng
               }
-              map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+              map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
             }
 
-            console.log($scope.geocoder);
             $scope.codeAddress = function () {
-              var address = $scope.location.address;
-              geocoder.geocode( { '$scope.location.address': address}, function(results, status) {
+              var address = document.getElementById('address').value;
+              console.log(address);
+              geocoder.geocode( { 'address': address}, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                   map.setCenter(results[0].geometry.location);
                   var marker = new google.maps.Marker({
@@ -78,11 +50,16 @@
                       position: results[0].geometry.location
                   });
                 } else {
-                  alert("Geocode was not successful for the following reason: " + status);
+                  alert('Geocode was not successful for the following reason: ' + status);
                 }
               });
             }
 
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+            // $scope.$on('$routeChangeStart', function(next, current) {
+            //   initialize();
+            // });
 
         }]);
 })();
