@@ -1,0 +1,12 @@
+Search Jobs: <input ng-model="query">
+<a href="#/admin"><button>Admin Portal</button></a>
+<a href="#/admin/jobs/create"><button>Add Job</button></a>
+
+<section data-ng-repeat="job in jobs | filter:query">
+    <h2>{{job.title}}</h2>
+    <p>{{job.company}}</p>
+    <a ng-href="{{job.url}}" target="_blank">{{job.url}}</a>
+    <p>{{job.email}}</p>
+    <a href="#/admin/jobs/{{job._id}}/update"><button>Update Job</button></a>
+    <button ng-click="deleteJob(job)">Remove Job</button>
+</section>

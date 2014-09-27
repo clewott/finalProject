@@ -7,16 +7,13 @@
     "google-maps",
     "companies",
     "jobs",
-    "events"
+    "events",
+    "admin"
     ])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/',{
                 templateUrl: "views/main.html",
-                controller: "homeCtrl"
-            })
-            .when('/admin',{
-                templateUrl: "views/admin.html",
                 controller: "homeCtrl"
             })
             .otherwise({

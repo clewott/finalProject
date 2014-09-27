@@ -32,16 +32,16 @@
             function editJob(job) {
                 $http.put("api/collections/jobs/" + job._id, job).then(function (res) {
                     $rootScope.$broadcast("job:updated");
+                    $log.info("job:updated");
                 });
 
             }
 
-            function deleteJob(jobId) {
-                $http.delete("api/collections/jobs/" + jobId).then(function (res) {
+            function deleteJob(job) {
+                $http.delete("api/collections/jobs/" + job._id).then(function (res) {
                     $rootScope.$broadcast("job:deleted");
                 });
             }
-
 
 
         }]);

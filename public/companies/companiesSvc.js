@@ -34,6 +34,7 @@
             function editCompany(company) {
                 $http.put("api/collections/companies/" + company._id, company).then(function (res) {
                     $rootScope.$broadcast("company:updated");
+                    $log.info("company:updated");
                 });
 
             }
@@ -43,7 +44,7 @@
                     $rootScope.$broadcast("company:deleted");
                 });
             }
-          
+
 
 
 

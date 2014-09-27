@@ -3,7 +3,7 @@
 
     angular
         .module('companies')
-        .controller('companiesCtrl', ['$scope','$window', 'companiesSvc', '$location', '$routeParams', function ($scope, $window, companiesSvc, $location, $routeParams) {
+        .controller('companiesCtrl', ['$scope','$window', 'companiesSvc', '$location', '$routeParams', '$rootScope', function ($scope, $window, companiesSvc, $location, $routeParams, $rootScope) {
 
 
             companiesSvc.getCompanies().success(function (companies) {
@@ -17,18 +17,19 @@
             $scope.createCompany = function (newCompany) {
                 companiesSvc.createCompany(newCompany);
                 console.log(newCompany);
-                $location.path('/companies/list');
+                $location.path('/admin/companies');
             };
 
             $scope.editCompany = function (company) {
-                companiesSvc.editCompany(company);
-                $location.path('/companies/list');
+                companiesSvc.editCompany(company).then(function (res) {
+                  $location.path('/admin/companies');
+                });
             };
 
             $scope.deleteCompany = function (company) {
                 companiesSvc.deleteCompany(company);
                   console.log("company deleted");
-                  $location.path('/companies/list');
+                  $location.path('/admin/companies');
             };
 
             var geocoder;
@@ -61,6 +62,13 @@
           }
 
           google.maps.event.addDomListener(window, 'load', initialize);
+
+
+          $rootScope.$on("company:deleted",  function() {
+      			companiesSvc.getCompanies().success(function (companies) {
+              $scope.companies = companies;
+            });
+          });
 
         }]);
 })();

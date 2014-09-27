@@ -2,12 +2,9 @@
   <a href="#/"><button>Home</button></a>
   <a href="#/companies/map"><button>Companies</button></a>
   <a href="#/events/list"><button>Events</button></a>
-  <a href="#/jobs/new"><button>Add Job</button></a>
   Search Companies: <input ng-model="query">
 </header>
 <hr>
-This is the jobs view list
-Search: <input ng-model="query">
 <section data-ng-repeat="job in jobs | filter:query">
     <h2>{{job.title}}</h2>
     <p>{{job.company}}</p>

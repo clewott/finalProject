@@ -14,18 +14,20 @@
 
             $scope.createJob = function (newJob) {
                 jobsSvc.createJob(newJob);
-                $location.path('/jobs/list');
+                $location.path('/admin/jobs');
             };
 
             $scope.editJob = function (job) {
-                jobsSvc.editCompany(job);
-                $location.path('/jobs/list');
+                jobsSvc.editCompany(job).then(function (res) {
+                  $location.path('/jobs/list');
+                });
             };
 
-            $scope.deleteJob = function (id) {
-                jobsSvc.deleteJob(id);
-                $location.path('/jobs/list');
-            }
+            $scope.deleteJob = function (job) {
+                jobsSvc.deleteJob(job);
+                console.log("job deleted");
+                $location.path('/admin/jobs');
+            };
 
 
         }]);

@@ -15,6 +15,10 @@
                     templateUrl: 'events/views/create.html',
                     controller: 'eventsCtrl'
                 })
+                .when('/events/edit', {
+                    templateUrl: 'events/views/edit.html',
+                    controller: 'eventsCtrl'
+                })
         });
 
 })();

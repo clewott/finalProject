@@ -11,10 +11,6 @@
                     templateUrl: 'jobs/views/list.html',
                     controller: 'jobsCtrl'
                 })
-                .when('/jobs/new', {
-                    templateUrl: 'jobs/views/create.html',
-                    controller: 'jobsCtrl'
-                })
         });
 
 })();

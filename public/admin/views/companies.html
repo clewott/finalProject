@@ -1,11 +1,8 @@
-<header>
-  <a href="#/"><button>Home</button></a>
-  <a href="#/companies/map"><button>Map View</button></a>
-  <a href="#/jobs/list"><button>Jobs</button></a>
-  <a href="#/events/list"><button>Events</button></a>
-  Search Companies: <input ng-model="query">
-</header>
-<hr>
+<a href="#/admin/companies/create"><button>Add A Company</button></a>
+<a href="#/admin"><button>Admin Portal</button></a>
+<br<
+Search Companies: <input ng-model="query">
+
 <section data-ng-repeat="company in companies | orderBy:'title' | filter:query">
     <div class="eachCompany">
       <h2>{{company.title}}</h2>
@@ -13,5 +10,7 @@
       <p>Address: {{company.location}}</p>
       <p>Phone Number: {{company.phoneNumber}}</p>
       <p>Email Address: {{company.email}}</p>
+      <button ng-click="deleteCompany(company)">Delete</button>
+      <a href="#/admin/companies/{{company._id}}/update"><button>Update</button></a>
     </div>
 </section>
