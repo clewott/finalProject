@@ -1,9 +1,9 @@
-This is a test!
-
-<input type="text" data-ng-model="company.title" placeholder="Company Name">
-<input type="text" data-ng-model="company.url" placeholder="Company Url">
-<input id="streetAddress" type="text" data-ng-model="company.location" placeholder="Company Address">
-<input type="text" data-ng-model="company.phoneNumber" placeholder="Company Phone Number">
-<input type="email" data-ng-model="company.email" placeholder="Company Email">
-<textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" placeholder="Company Technologies"></textarea>
-<button data-ng-click="createCompany(company)">Create</button>
+<form ng-submit="createCompany(company)">
+  <input type="text" data-ng-model="company.title" placeholder="Company Name"><br>
+  <input type="text" data-ng-model="company.url" placeholder="Company Url"><br>
+  <input id="streetAddress" type="text" data-ng-model="company.location" placeholder="Company Address"><br>
+  <input type="text" data-ng-model="company.phoneNumber" placeholder="Company Phone Number"><br>
+  <input type="email" data-ng-model="company.email" placeholder="Company Email"><br>
+  <textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" placeholder="Company Technologies"></textarea><br>
+  <button type="submit">Create</button>
+</form>

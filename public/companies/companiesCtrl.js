@@ -3,11 +3,11 @@
 
     angular
         .module('companies')
-        .controller('companiesCtrl', ['$scope', 'companiesSvc', '$location', '$routeParams', function ($scope, companiesSvc, $location, $routeParams) {
+        .controller('companiesCtrl', ['$scope','$window', 'companiesSvc', '$location', '$routeParams', function ($scope, $window, companiesSvc, $location, $routeParams) {
 
 
             companiesSvc.getCompanies().success(function (companies) {
-                $scope.companies = companies;
+                $scope.companies = $window.companies = companies;
             });
 
             companiesSvc.getCompany($routeParams.companyId).success(function (company) {
@@ -25,10 +25,11 @@
                 $location.path('/companies/list');
             };
 
-            $scope.deleteCompany = function (id) {
-                companiesSvc.deleteCompany(id);
-                $location.path('/companies/list');
-            }
+            $scope.deleteCompany = function (company) {
+                companiesSvc.deleteCompany(company);
+                  console.log("company deleted");
+                  $location.path('/companies/list');
+            };
 
             var geocoder;
             var map;
@@ -40,31 +41,26 @@
                 center: latlng
               }
               map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+              addCompanyMarkers(companies);
             }
 
-            $scope.$on('$routeChangeStart', function(next, current) {
-              var address = document.getElementById('streetAddress').value;
-              console.log(address);
-              geocoder.geocode( { 'address': address}, function(results, status) {
-              for(i = 0; i < $scope.companies.length; i++) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                  map.setCenter(results[i].geometry.location);
+
+            function addCompanyMarkers(companies) {
+              for(var i=0; i<companies.length; i++) {
+                geocoder.geocode( { 'address': companies[i].location }, function(results, status) {
+                  for(var j=0; j<results.length; j++) {
+                    console.log(results);
                   var marker = new google.maps.Marker({
+                      title: "companies.name",
                       map: map,
-                      position: results[i].geometry.location
+                      position: results[j].geometry.location
                   });
-                } else {
-                  alert('Geocode was not successful for the following reason: ' + status);
                 }
-              }
               });
-            })
+            }
+          }
 
-            google.maps.event.addDomListener(window, 'load', initialize);
-
-            // $scope.$on('$routeChangeStart', function(next, current) {
-            //   function initialize();
-            // });
+          google.maps.event.addDomListener(window, 'load', initialize);
 
         }]);
 })();

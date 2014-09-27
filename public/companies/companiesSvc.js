@@ -18,7 +18,6 @@
             var companyMarkers = [];
 
             function getCompanies() {
-
                 return $http.get("api/collections/companies/");
             }
 
@@ -39,13 +38,14 @@
 
             }
 
-            function deleteCompany(companyId) {
-                $http.delete("api/collections/companies/" + companyId).then(function (res) {
+            function deleteCompany(company) {
+                $http.delete("api/collections/companies/" + company._id, company).then(function (res) {
                     $rootScope.$broadcast("company:deleted");
                 });
             }
+          
 
-            
+
 
 
         }]);

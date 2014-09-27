@@ -1,26 +1,12 @@
-<a href="#/"><button>Home</button></a>
-<a href="#/companies/list"><button>List View</button></a>
-<a href="#/companies/new"><button>Add Company</button></a>
-Search: <input ng-model="query">
+<header>
+  <a href="#/"><button>Home</button></a>
+  <a href="#/companies/list"><button>List View</button></a>
+  <a href="#/jobs/list"><button>Jobs</button></a>
+  <a href="#/events/list"><button>Events</button></a>
+  <a href="#/companies/new" class="btn btn-success">Add Company</a>
+  Search Companies: <input ng-model="query">
+</header>
+<hr>
 
-<!-- <form>
-  <input type="number" class="" ng-model="marker.markerLat" step="any" required="">
-  <input type="number" class="" ng-model="marker.markerLng" step="any" required="">
-  <button class="button" ng-click="addMarker(marker)">Add</button>
-</form>
-<google-map center="map.center" zoom="map.zoom" options="options" draggable="true">
-  <markers models="companyMarkers" coords="'coords'"></markers>
-</google-map> -->
-
-<!-- <div id="panel" onload="initialize()">
-  <input id="address" type="textbox" ng-model="location.address" placeholder="Charleston, SC">
-  <input type="button" value="Geocode" ng-click="codeAddress(location)">
-</div>
-<google-map center="map.center" zoom="map.zoom" draggable="true" id="map-canvas"></google-map> -->
-<div id="panel">
-  <input id="address" type="text" ng-model="address" placeholder="Charleston, SC">
-  <input type="button" value="Geocode" ng-click="codeAddress()">
-</div>
-<div id="map-canvas" ng-repeat="company in companies">
-
+<div id="map-canvas">
 </div>

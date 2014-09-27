@@ -1,5 +1,6 @@
 body {
   background-image: Url("http://pctechmag.com/wp-content/uploads/2013/04/technology.jpg");
+  background-attachment: fixed;
 }
 
 .angular-google-map-container {
@@ -8,4 +9,14 @@ body {
 
 #map-canvas {
   height: 600px;
+}
+
+.eachCompany {
+  background-color: rgba(250,250,250,0.6);
+  margin: 5px 0px 5px 0px;
+  padding: 1px;
+  border-radius: 5px;
+  h2 {
+    margin-top: 10px;
+  }
 }

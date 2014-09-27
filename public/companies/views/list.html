@@ -1,11 +1,19 @@
-<a href="#/"><button>Home</button></a>
-<a href="#/companies/map"><button>Map View</button></a>
-<a href="#/companies/new" class="btn btn-success">Add Company</a>
-Search: <input ng-model="query">
+<header>
+  <a href="#/"><button>Home</button></a>
+  <a href="#/companies/map"><button>Map View</button></a>
+  <a href="#/jobs/list"><button>Jobs</button></a>
+  <a href="#/events/list"><button>Events</button></a>
+  <a href="#/companies/new" class="btn btn-success">Add Company</a>
+  Search Companies: <input ng-model="query">
+</header>
+<hr>
 <section data-ng-repeat="company in companies | orderBy:'title' | filter:query">
-    <h2>{{company.title}}</h2>
-    <a ng-href="http://{{company.url}}" target="_blank">{{company.url}}</a>
-    <p>{{company.location}}</p>
-    <p>{{company.phoneNumber}}</p>
-    <p>{{company.email}}</p>
+    <div class="eachCompany">
+      <h2>{{company.title}}</h2>
+      <p>Website: <a ng-href="http://{{company.url}}" target="_blank">{{company.url}}</a></p>
+      <p>Address: {{company.location}}</p>
+      <p>Phone Number: {{company.phoneNumber}}</p>
+      <p>Email Address: {{company.email}}</p>
+      <button ng-click="deleteCompany(company)">Delete</button>
+    </div>
 </section>

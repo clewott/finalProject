@@ -4,4 +4,17 @@
   <a class="btn btn-lg btn-success" ng-href="#/companies/list">Go to Companies!</a>
   <a class="btn btn-lg btn-success" ng-href="#/jobs/list">Go to Jobs!</a>
   <a class="btn btn-lg btn-success" ng-href="#/events/list">Go to Events!</a>
+  <button class="btn btn-lg btn-success" ng-click="admin=!admin">Admin</button>
 </div>
+
+<form ng-show="admin" ng-submit="login(username, password)">
+  <label>User name</label>
+  <input type="text" ng-model="username" class="ng-pristine ng-valid">
+  <label>Password</label>
+  <input type="password" ng-model="password" class="ng-pristine ng-valid">
+  <br/>
+  {{loginError}}  {{loggedUser}}
+  <br/><br/>
+  <button class="btn btn-success" type="submit">Submit</button>
+  <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</form>
