@@ -3,14 +3,14 @@
 <br<
 Search Companies: <input ng-model="query">
 
-<section data-ng-repeat="company in companies | orderBy:'title' | filter:query">
+<section data-ng-repeat="building in companies | orderBy:'title' | filter:query">
     <div class="eachCompany">
-      <h2>{{company.title}}</h2>
-      <p>Website: <a ng-href="http://{{company.url}}" target="_blank">{{company.url}}</a></p>
-      <p>Address: {{company.location}}</p>
-      <p>Phone Number: {{company.phoneNumber}}</p>
-      <p>Email Address: {{company.email}}</p>
-      <button ng-click="deleteCompany(company)">Delete</button>
-      <a href="#/admin/companies/{{company._id}}/update"><button>Update</button></a>
+      <h2>{{building.title}}</h2>
+      <p>Website: <a ng-href="http://{{building.url}}" target="_blank">{{building.url}}</a></p>
+      <p>Address: {{building.location}}</p>
+      <p>Phone Number: {{building.phoneNumber}}</p>
+      <p>Email Address: {{building.email}}</p>
+      <button ng-click="deleteCompany(building)">Delete</button>
+      <a href="#/admin/companies/{{building._id}}"><button>Update</button></a>
     </div>
 </section>

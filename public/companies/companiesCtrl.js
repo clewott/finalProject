@@ -14,14 +14,10 @@
                 $scope.company = company;
             });
 
-            $scope.createCompany = function (newCompany) {
-                companiesSvc.createCompany(newCompany);
-                console.log(newCompany);
-                $location.path('/admin/companies');
-            };
 
             $scope.editCompany = function (company) {
-                companiesSvc.editCompany(company).then(function (res) {
+                console.log(company);
+                companiesSvc.editCompany(company).then(function () {
                   $location.path('/admin/companies');
                 });
             };
@@ -32,7 +28,7 @@
                   $location.path('/admin/companies');
             };
 
-            var geocoder;
+            var geocoder = new google.maps.Geocoder();
             var map;
             function initialize() {
               geocoder = new google.maps.Geocoder();
@@ -42,24 +38,24 @@
                 center: latlng
               }
               map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-              addCompanyMarkers(companies);
+              // addCompanyMarkers(companies);
             }
 
 
-            function addCompanyMarkers(companies) {
-              for(var i=0; i<companies.length; i++) {
-                geocoder.geocode( { 'address': companies[i].location }, function(results, status) {
-                  for(var j=0; j<results.length; j++) {
-                    console.log(results);
-                  var marker = new google.maps.Marker({
-                      title: "companies.name",
-                      map: map,
-                      position: results[j].geometry.location
-                  });
-                }
-              });
-            }
-          }
+          //   function addCompanyMarkers(companies) {
+          //     for(var i=0; i<companies.length; i++) {
+          //       geocoder.geocode( { 'address': companies[i].location }, function(results, status) {
+          //         for(var j=0; j<results.length; j++) {
+          //           console.log(results);
+          //         var marker = new google.maps.Marker({
+          //             title: "companies.name",
+          //             map: map,
+          //             position: results[j].geometry.location
+          //         });
+          //       }
+          //     });
+          //   }
+          // }
 
           google.maps.event.addDomListener(window, 'load', initialize);
 
@@ -69,6 +65,37 @@
               $scope.companies = companies;
             });
           });
+
+          $scope.createCompany = function (company) {
+              companiesSvc.createCompany(company);
+              console.log(company);
+              createlatlng(company);
+              $location.path('/admin/companies');
+          };
+
+
+          function createlatlng(company) {
+            geocoder.geocode({ 'address': company.location }, function(results, status) {
+              console.log(results);
+              var marker = new google.maps.Marker({
+                  title: company.title,
+                  map: map,
+                  position: results[0].geometry.location
+              });
+              console.log(marker);
+              console.log(company);
+            }
+            );
+          };
+
+          // function createMarker(company) {
+          //   var marker = new google.maps.Marker({
+          //       title: company.title,
+          //       map: map,
+          //       position: company.location.geometry.location
+          //   });
+          //   console.log(marker);
+          // };
 
         }]);
 })();

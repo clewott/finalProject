@@ -11,11 +11,8 @@
                 getCompany: getCompany,
                 createCompany: createCompany,
                 editCompany: editCompany,
-                deleteCompany: deleteCompany,
-                companyMarkers: companyMarkers
+                deleteCompany: deleteCompany
             };
-
-            var companyMarkers = [];
 
             function getCompanies() {
                 return $http.get("api/collections/companies/");

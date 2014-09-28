@@ -19,7 +19,7 @@
                     templateUrl: 'admin/views/createCompany.html',
                     controller: 'companiesCtrl'
                 })
-                .when('/admin/companies/:id/update', {
+                .when('/admin/companies/:id', {
                     templateUrl: 'admin/views/editCompany.html',
                     controller: 'companiesCtrl'
                 })

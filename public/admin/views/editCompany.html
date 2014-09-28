@@ -2,10 +2,10 @@ Update The Company
 <form ng-submit="editCompany(company)">
   <input type="text" data-ng-model="company.title" value="company.title"><br>
   <input type="text" data-ng-model="company.url" value="company.url"><br>
-  <input id="streetAddress" type="text" data-ng-model="company.location" value="company.location"><br>
+  <input type="text" data-ng-model="company.location" value="company.location"><br>
   <input type="text" data-ng-model="company.phoneNumber" value="company.phoneNumber"><br>
   <input type="email" data-ng-model="company.email" value="company.email"><br>
-  <textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" value="company.technologies"></textarea><br>
+  <textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" value="company.technologies">{{company.technologies}}</textarea><br>
   <button type="submit">Update</button>
   <a href="#/admin/companies"><button>Cancel</button></a>
 </form>
