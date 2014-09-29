@@ -8,7 +8,7 @@
                 $scope.jobs = jobs;
             });
 
-            jobsSvc.getJob($routeParams.jobId).success(function (job) {
+            jobsSvc.getJob($routeParams.id).success(function (job) {
                 $scope.job = job;
             });
 
