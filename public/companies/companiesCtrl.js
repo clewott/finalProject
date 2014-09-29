@@ -37,9 +37,9 @@
                 zoom: 11,
                 center: latlng
               }
-              map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+              $window.map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
               // addCompanyMarkers(companies);
-            }
+            };
 
 
           //   function addCompanyMarkers(companies) {
@@ -73,7 +73,6 @@
               $location.path('/admin/companies');
           };
 
-
           function createlatlng(company) {
             geocoder.geocode({ 'address': company.location }, function(results, status) {
               console.log(results);
@@ -87,15 +86,6 @@
             }
             );
           };
-
-          // function createMarker(company) {
-          //   var marker = new google.maps.Marker({
-          //       title: company.title,
-          //       map: map,
-          //       position: company.location.geometry.location
-          //   });
-          //   console.log(marker);
-          // };
 
         }]);
 })();
