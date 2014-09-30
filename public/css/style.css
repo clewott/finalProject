@@ -1,6 +1,7 @@
 body {
-  background-image: Url("http://pctechmag.com/wp-content/uploads/2013/04/technology.jpg");
-  background-attachment: fixed; }
+  background-image: Url("http://d1vmp8zzttzftq.cloudfront.net/wp-content/uploads/2012/09/arthur-ravenel-jr-cooper-river-suspension-bridge-charleston-SC-from-patriots-point-south-carolina-1600x1102.jpg");
+  background-attachment: fixed;
+  background-size: 100% Auto; }
 
 .angular-google-map-container {
   height: 600px; }

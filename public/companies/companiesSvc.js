@@ -3,7 +3,7 @@
 
     angular
         .module('companies')
-        .factory('companiesSvc', ['$http', '$rootScope', function ($http, $rootScope) {
+        .factory('companiesSvc', ['$http', '$rootScope', '$log', function ($http, $rootScope, $log) {
 
             // public service methods
             return {

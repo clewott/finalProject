@@ -3,6 +3,7 @@ html
     head
         title= title
         link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/components/fullcalendar/dist/fullcalendar.css')
         link(rel='stylesheet', href='/css/style.css')
     body(ng-app= ngApp )
         block content
@@ -14,6 +15,7 @@ html
         script(src='//maps.googleapis.com/maps/api/js?sensor=false')
         script(src='/components/lodash/dist/lodash.underscore.js')
         script(src='/components/angular-google-maps/dist/angular-google-maps.js')
+        script(src='/components/bootstrap/dist/js/bootstrap.js')
         script(src='/app.js')
         script(src='/homeCtrl.js')
         script(src='/companies/companies.js')

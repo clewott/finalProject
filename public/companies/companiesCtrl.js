@@ -29,24 +29,9 @@
                 $location.path('/admin/companies');
             };
 
-
-            function createlatlng(company) {
-              var coords = {};
-              geocoder.geocode({ 'address': company.location }, function(results, status) {
-                coords = results[0].geometry.location;
-
-              });
-              return coords;
-            };
-
-
             function createMarkers(companies) {
               console.log(companies);
               for(var i = 0; i< companies.length; i++) {
-                console.log(companies[i].geo);
-                console.log(companies[i].title);
-                console.log(companies[i].geo.lat);
-                console.log(companies[i].geo.lng);
                 var latLong = new google.maps.LatLng(companies[i].geo.lat,companies[i].geo.lng);
                 var marker = new google.maps.Marker(
                 {
@@ -60,9 +45,18 @@
 
             $scope.editCompany = function (company) {
                 console.log(company);
-                companiesSvc.editCompany(company).then(function () {
-                  $location.path('/admin/companies');
+                geocoder.geocode({ 'address': company.location }, function(results, status) {
+                  console.log(results[0].geometry);
+                  company.geo = {
+                    lat: results[0].geometry.location.k,
+                    lng: results[0].geometry.location.B
+                  };
+
+                  companiesSvc.editCompany(company);
+
                 });
+
+                $location.path('/admin/companies');
             };
 
             $scope.deleteCompany = function (company) {
@@ -101,13 +95,22 @@
             });
           });
 
+          $rootScope.$on("company:added",  function() {
+            companiesSvc.getCompanies().success(function (companies) {
+              $scope.companies = companies;
+            });
+          });
+
+          $rootScope.$on("company:updated",  function() {
+            companiesSvc.getCompanies().success(function (companies) {
+              $scope.companies = companies;
+            });
+          });
+
           $scope.mapInit = function () {
 
             initialize();
           }
-
-          // google.maps.event.addDomListener(window, 'load', initialize);
-
 
         }]);
 })();
