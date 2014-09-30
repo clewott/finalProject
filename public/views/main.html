@@ -1,9 +1,5 @@
 
-<div class="jumbotron">
-  <h1>Tech Connect</h1>
-  <a class="btn btn-lg btn-success" ng-href="#/companies/list">Go to Companies!</a>
-  <a class="btn btn-lg btn-success" ng-href="#/jobs/list">Go to Jobs!</a>
-  <a class="btn btn-lg btn-success" ng-href="#/events/list">Go to Events!</a>
+<div class="admin">
   <button class="btn btn-lg btn-success" ng-click="admin=!admin">Admin</button>
 </div>
 
@@ -16,5 +12,17 @@
   {{loginError}}  {{loggedUser}}
   <br/><br/>
   <button class="btn btn-success" type="submit">Submit</button>
-  <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+  <button class="btn btn-warning" ng-click="admin=!admin">Cancel</button>
 </form>
+
+<div class="logoDiv">
+  <img class="logo" src="../images/techConnect.png" alt="">
+</div>
+
+<div class="row">
+  <ul class="col-xs-12 mainPages">
+    <li class="col-xs-4 mainLinks"><a href="#/companies/list"><img class="col-xs-12 mainLinks" src="http://www.852cmd.com/wp-content/uploads/2013/04/852-cmd-local-business-web-design.jpg" alt=""></a></li>
+    <li class="col-xs-4 mainLinks"><a href="#/jobs/list"><img class="col-xs-12 mainLinks" src="http://o2.aolcdn.com/dims-shared/dims3/PATCH/format/jpg/quality/82/resize/1024x768/http://hss-prod.hss.aol.com/hss/storage/patch/9189152a2b29cd967f89e0801fc07cd5" alt=""></a></li>
+    <li class="col-xs-4 mainLinks"><a href="#/events/list"><img class="col-xs-12 mainLinks" src="http://rack.1.mshcdn.com/media/ZgkyMDEzLzA1LzA3L2EwL2NhbGVuZGFyLjU0MzEzLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/e4067598/21f/calendar.jpg" alt=""></a></li>
+  </ul>
+</div>

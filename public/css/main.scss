@@ -1,7 +1,41 @@
 body {
-  background-image: Url("http://d1vmp8zzttzftq.cloudfront.net/wp-content/uploads/2012/09/arthur-ravenel-jr-cooper-river-suspension-bridge-charleston-SC-from-patriots-point-south-carolina-1600x1102.jpg");
+  background-image: Url("http://subtlepatterns.com/patterns/tweed.png");
   background-attachment: fixed;
-  background-size: 100% Auto;
+}
+
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+
+.admin {
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.logoDiv {
+  text-align: center;
+  height: 400px;
+  img {
+    margin-top: 50px;
+    background-color: rgba(250, 250, 250, 0.3);
+  }
+}
+
+.mainLinks {
+  padding: 0px;
+}
+
+.mainPages {
+  list-style-type: none;
+  padding: 0px;
+  li {
+    display: inline-block;
+    background-color: black;
+    height: 100px;
+  }
 }
 
 .angular-google-map-container {
@@ -20,4 +54,37 @@ body {
   h2 {
     margin-top: 10px;
   }
+}
+
+/*** Calendar ***/
+
+#directives-calendar {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.calAlert{
+	width: 595px; float: right; margin-bottom: 5px;
+}
+
+.calXBtn{
+	float: right; margin-top: -5px; margin-right: -5px;
+}
+
+.calWell{
+	float: left; margin-bottom: 40px;
+}
+
+.fc-event.openSesame .fc-event-skin{
+	background-color: rgb(229, 229, 11);
+	color: black;
+}
+
+.fc-event.customFeed .fc-event-skin{
+	background-color: rgb(132, 222, 175);
+	color: black;
+}
+
+.calTools{
+	margin-bottom: 10px;
 }

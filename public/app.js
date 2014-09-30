@@ -5,6 +5,8 @@
     "ngRoute",
     "ngCookies",
     "google-maps",
+    "ui.calendar",
+    "ui.bootstrap",
     "companies",
     "jobs",
     "events",
