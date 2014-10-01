@@ -6,6 +6,10 @@
     <input type="text" ng-model="company.location" value="company.location"><br>
     <input type="text" ng-model="company.phoneNumber" value="company.phoneNumber"><br>
     <input type="email" ng-model="company.email" value="company.email"><br>
+    <select data-ng-model="company.hiring" value="company.hiring">
+      <option value="hiring">We Are Hiring</option>
+      <option value="not_hiring">We Are Not Hiring</option>
+    </select><br>
     <textarea cols="30" rows="10" ng-model="company.technologies" value="company.technologies">{{company.technologies}}</textarea><br>
     <button type="submit" class="btn btn-lg btn-success">Update</button>
     <a href="#/admin/companies"><button class="btn btn-lg btn-danger">Cancel</button></a>

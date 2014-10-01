@@ -50,7 +50,7 @@ body {
 
 .logoDiv {
   text-align: center;
-  height: 400px;
+  height: 350px;
   img {
     margin-top: 50px;
     background-color: rgba(250, 250, 250, 0.3);
@@ -67,7 +67,18 @@ body {
   li {
     display: inline-block;
     background-color: black;
-    height: 100px;
+    img {
+      height: 300px;
+    }
+  }
+}
+
+.aboutTC {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  p {
+    font-size: 2em;
   }
 }
 
@@ -97,12 +108,23 @@ body {
 }
 
 .eachJob {
+  position: relative;
   background-color: rgba(250,250,250,0.6);
   margin: 5px 10px;
   padding: 5px 10px;
   border-radius: 5px;
   h2 {
     margin-top: 10px;
+    text-decoration: underline;
+  }
+  #applyNow {
+    text-align: center;
+  }
+  img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-height: 200px;
   }
 }
 

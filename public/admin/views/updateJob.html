@@ -4,6 +4,11 @@
       <input type="text" data-ng-model="job.company" value="job.company"><br>
       <input type="text" data-ng-model="job.url" value="job.url"><br>
       <input type="text" data-ng-model="job.title" value="job.title"><br>
+      <select data-ng-model="job.type" value="job.type">
+        <option value="Full Stack Engineer">Full Stack Engineer</option>
+        <option value="Front End Engineer">Front End Engineer</option>
+        <option value="Back End Engineer">Back End Engineer</option>
+      </select><br>
       <textarea cols="30" rows="10" data-ng-model="job.description" value="job.description"></textarea><br>
       <input type="text" data-ng-model="job.email" value="job.email"><br>
       <button type="submit" class="btn btn-lg btn-success">Update Job</button>

@@ -20,8 +20,8 @@
   <div class="eachJob">
     <h2>{{job.title}}</h2>
     <p>Company: {{job.company}}</p>
-    <p>Job URL: <a ng-href="{{job.url}}" target="_blank">{{job.url}}</a></p>
+    <p>Job URL: <a ng-href="http://{{job.url}}" target="_blank">{{job.url}}</a></p>
     <p>Contact Email Address: {{job.email}}</p>
-    <a href=""><button class="btn btn-success">Learn More About {{job.title}}</button></a>
+    <a href="#/jobs/list/{{job._id}}"><button class="btn btn-success">Learn More About {{job.title}}</button></a>
   </div>
 </section>

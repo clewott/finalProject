@@ -6,6 +6,10 @@
     <input id="streetAddress" type="text" data-ng-model="company.location" placeholder="Company Address" required><br>
     <input type="tel" data-ng-model="company.phoneNumber" placeholder="Company Phone Number" required><br>
     <input type="email" data-ng-model="company.email" placeholder="Company Email" required><br>
+    <select data-ng-model="company.hiring">
+      <option value="hiring">We Are Hiring</option>
+      <option value="not_hiring">We Are Not Hiring</option>
+    </select>
     <textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" placeholder="Company Technologies" required></textarea><br>
     <button type="submit" class="btn btn-lg btn-success">Create</button>
     <a href="#/admin/companies"><button class="btn btn-lg btn-warning">Cancel</button></a>

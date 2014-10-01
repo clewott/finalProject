@@ -11,6 +11,10 @@
                     templateUrl: 'jobs/views/list.html',
                     controller: 'jobsCtrl'
                 })
+                .when('/jobs/list/:id', {
+                    templateUrl: 'jobs/views/show.html',
+                    controller: 'jobsCtrl'
+                })
         });
 
 })();
