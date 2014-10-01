@@ -1,9 +1,9 @@
 <header>
-  <a href="#/"><button>Home</button></a>
-  <a href="#/companies/map"><button>Map View</button></a>
-  <a href="#/jobs/list"><button>Jobs</button></a>
-  <a href="#/events/list"><button>Events</button></a>
-  Search Companies: <input ng-model="query">
+  <a href="#/"><button class="btn btn-danger">Home</button></a>
+  <a href="#/companies/map"><button class="btn btn-danger">Map View</button></a>
+  <a href="#/jobs/list"><button class="btn btn-danger">Jobs</button></a>
+  <a href="#/events/list"><button class="btn btn-danger">Events</button></a>
+  <p class="searchData"><span>Search Companies: </span><input ng-model="query"></p>
 </header>
 <hr>
 <section data-ng-repeat="company in companies | orderBy:'title' | filter:query">

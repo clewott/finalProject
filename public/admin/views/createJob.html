@@ -1,9 +1,17 @@
-<form action="">
-  <input type="text" data-ng-model="job.company" placeholder="Company Name">
-  <input type="text" data-ng-model="job.url" placeholder="Job Url">
-  <input type="text" data-ng-model="job.title" placeholder="Job Title">
-  <textarea cols="30" rows="10" data-ng-model="job.description" placeholder="Job Description"></textarea>
-  <input type="text" data-ng-model="job.email" placeholder="Email To Be Contacted At">
-  <button data-ng-click="createJob(job)">Add Job</button>
-  <a href="#/admin/jobs"><button>Cancel</button></a>
-</form>
+<div class="createJob">
+  <h2>Create a Job</h2>
+  <form>
+    <input type="text" data-ng-model="job.company" placeholder="Company Name">
+    <input type="text" data-ng-model="job.url" placeholder="Job Url">
+    <input type="text" data-ng-model="job.title" placeholder="Job Title">
+    <input type="text" data-ng-model="job.email" placeholder="Email To Be Contacted At">
+    <select data-ng-model="job.type">
+      <option value="Full Stack Engineer">Full Stack Engineer</option>
+      <option value="Front End Engineer">Front End Engineer</option>
+      <option value="Back End Engineer">Back End Engineer</option>
+    </select>
+    <textarea cols="30" rows="10" data-ng-model="job.description" placeholder="Job Description"></textarea>
+    <button data-ng-click="createJob(job)" class="btn btn-lg btn-success">Add Job</button>
+    <a href="#/admin/jobs"><button class="btn btn-lg btn-warning">Cancel</button></a>
+  </form>
+</div>

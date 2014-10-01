@@ -1,10 +1,13 @@
-<form ng-submit="createCompany(company)">
-  <input type="text" data-ng-model="company.title" placeholder="Company Name" required><br>
-  <input type="text" data-ng-model="company.url" placeholder="Company Url" required><br>
-  <input id="streetAddress" type="text" data-ng-model="company.location" placeholder="Company Address" required><br>
-  <input type="tel" data-ng-model="company.phoneNumber" placeholder="Company Phone Number" required><br>
-  <input type="email" data-ng-model="company.email" placeholder="Company Email" required><br>
-  <textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" placeholder="Company Technologies" required></textarea><br>
-  <button type="submit">Create</button>
-  <a href="#/admin/companies"><button>Cancel</button></a>
-</form>
+<div class="createCompany">
+  <h2>Create A Company</h2>
+  <form ng-submit="createCompany(company)">
+    <input type="text" data-ng-model="company.title" placeholder="Company Name" required><br>
+    <input type="text" data-ng-model="company.url" placeholder="Company Url" required><br>
+    <input id="streetAddress" type="text" data-ng-model="company.location" placeholder="Company Address" required><br>
+    <input type="tel" data-ng-model="company.phoneNumber" placeholder="Company Phone Number" required><br>
+    <input type="email" data-ng-model="company.email" placeholder="Company Email" required><br>
+    <textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" placeholder="Company Technologies" required></textarea><br>
+    <button type="submit" class="btn btn-lg btn-success">Create</button>
+    <a href="#/admin/companies"><button class="btn btn-lg btn-warning">Cancel</button></a>
+  </form>
+</div>

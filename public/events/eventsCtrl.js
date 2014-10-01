@@ -4,9 +4,9 @@
     angular
         .module('events')
         .controller('eventsCtrl', ['$scope', 'eventsSvc', '$location', '$routeParams', function ($scope, eventsSvc, $location, $routeParams) {
-            eventsSvc.getEvents().success(function (events) {
-                $scope.events = events;
-            });
+            // eventsSvc.getEvents().success(function (events) {
+            //     $scope.events = events;
+            // });
 
             eventsSvc.getEvent($routeParams.companyId).success(function (event) {
                 $scope.event = event;
@@ -15,6 +15,7 @@
             $scope.createEvent = function (newEvent) {
                 eventsSvc.createEvent(newEvent);
                 $location.path('/events/list');
+                $scope.createEvent = {};
             };
 
             $scope.editEvent = function (event) {
@@ -43,7 +44,7 @@
             };
             /* event source that contains custom events on the scope */
             $scope.events = [
-              {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false}
+              // {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false}
             ];
             /* event source that calls a function on every view switch */
             $scope.eventsF = function (start, end, timezone, callback) {

@@ -37,7 +37,7 @@
             }
 
             function deleteEvent(eventId) {
-                $http.delete("api/collections/events/" + eventId).then(function (res) {
+                $http.delete("api/collections/events/" + event._id, eventId).then(function (res) {
                     $rootScope.$broadcast("event:deleted");
                 });
             }

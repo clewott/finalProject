@@ -1,44 +1,48 @@
 <header>
-  <a href="#/"><button>Home</button></a>
-  <a href="#/companies/map"><button>Companies</button></a>
-  <a href="#/jobs/list"><button>Jobs</button></a>
+  <a href="#/"><button class="btn btn-danger">Home</button></a>
+  <a href="#/companies/list"><button class="btn btn-danger">Companies</button></a>
+  <a href="#/jobs/list"><button class="btn btn-danger">Jobs</button></a>
 </header>
 <hr>
 
 <div role="main">
-    <div class="container">
-        <section id="directives-calendar" ng-controller="eventsCtrl">
-            <div class="well">
-                <div class="row-fluid">
-                    <div class="span4">
-
-                        <div class="btn-group calTools">
-                          <button type="button" class="btn btn-primary" ng-click="addEvent()">
-                            Add Event
-                          </button>
-                        </div>
-
-                        <ul class="unstyled">
-                            <li ng-repeat="e in events">
-                                <div class="alert alert-info">
-                                    <a class="close" ng-click="remove($index)"><i class="icon-remove"></i></a>
-                                    <b> <input ng-model="e.title"></b>
-                                    {{e.start | date:"MMM dd"}} - {{e.end | date:"MMM dd"}}
-                                </div>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="span8">
-                              <div class="alert-success calAlert" ng-show="alertMessage != undefined && alertMessage != ''">
-                                <h4>{{alertMessage}}</h4>
-                              </div>
-                            <div class="calendar" ng-model="eventSources" calendar="myCalendar1" config="uiConfig.calendar" ui-calendar="uiConfig.calendar"></div>
-                    </div>
-                </div>
+  <div class="container">
+    <section id="directives-calendar" ng-controller="eventsCtrl">
+      <div class="well">
+        <div class="row-fluid">
+          <div class="span8">
+            <div class="calendar" ng-model="eventSources" calendar="myCalendar1" config="uiConfig.calendar" ui-calendar="uiConfig.calendar">
             </div>
+          </div>
 
-        </section>
-    </div>
+          <!-- <div class="span4">
+
+            <h2>List Of Events:</h2>
+
+            <span class="btn-group calTools">
+              <button class="btn btn-primary" ng-click="e = true" ng-hide="e">Add Event</button>
+            </span>
+
+            <form ng-submit="createEvent(event)" ng-show="e">
+              <input type="text" data-ng-model="event.title" placeholder="Event Title">
+              <input type="date" data-ng-model="event.date" placeholder="Event Date">
+              <input type="time" data-ng-model="event.time" placeholder="Event Time">
+              <textarea cols="30" rows="10" data-ng-model="event.description" placeholder="Event Description"></textarea>
+              <button type="submit" ng-click="e = false">Add Event</button>
+              <button ng-click="e = false">Cancel</button>
+            </form>
+
+            <ul class="unstyled">
+              <li ng-repeat="event in events">
+                <div class="alert alert-info">
+                  <h4>{{event.title}}</h4>
+                  <span>{{event.start | date:"MMM d"}}</span>
+                </div>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </section>
+  </div>
 </div>

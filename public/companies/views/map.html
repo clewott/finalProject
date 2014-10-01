@@ -1,11 +1,12 @@
 <header ng-init="mapInit()">
-  <a href="#/"><button>Home</button></a>
-  <a href="#/companies/list"><button>List View</button></a>
-  <a href="#/jobs/list"><button>Jobs</button></a>
-  <a href="#/events/list"><button>Events</button></a>
-  Search Companies: <input ng-model="query">
+  <a href="#/"><button class="btn btn-danger">Home</button></a>
+  <a href="#/companies/list"><button class="btn btn-danger">List View</button></a>
+  <a href="#/jobs/list"><button class="btn btn-danger">Jobs</button></a>
+  <a href="#/events/list"><button class="btn btn-danger">Events</button></a>
 </header>
 <hr>
 
-<div id="map">
+<div class="theMap">
+  <h2>Local Charleston Tech Companies</h2>
+  <div id="map"></div>
 </div>

@@ -11,14 +11,6 @@
                     templateUrl: 'events/views/list.html',
                     controller: 'eventsCtrl'
                 })
-                .when('/events/new', {
-                    templateUrl: 'events/views/create.html',
-                    controller: 'eventsCtrl'
-                })
-                .when('/events/edit', {
-                    templateUrl: 'events/views/edit.html',
-                    controller: 'eventsCtrl'
-                })
         });
 
 })();

@@ -1,6 +1,14 @@
 body {
   background-image: Url("http://subtlepatterns.com/patterns/tweed.png");
   background-attachment: fixed;
+  header {
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .adminHeader {
+    text-align: center;
+  }
 }
 
 .container {
@@ -14,6 +22,31 @@ body {
   margin-top: 10px;
   margin-right: 10px;
 }
+
+.createCompany, .createJob, .editCompany, .editJob {
+  text-align: center;
+  font-size: 1.5em;
+  background-color: #1B85B7;
+  width:40%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  h2 {
+    padding-top: 10px;
+    color: white;
+  }
+  form {
+    padding-bottom: 10px;
+    input, textarea, select {
+      margin-bottom: 5px;
+      width: 90%;
+      border-radius: 5px;
+      border: 1px solid grey;
+      background-color: rgba(250, 250, 250, 0.5);
+    }
+  }
+}
+
 
 .logoDiv {
   text-align: center;
@@ -42,17 +75,55 @@ body {
   height: 600px;
   }
 
-#map {
-  height: 600px;
+.theMap {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  #map {
+    height: 550px;
+  }
 }
 
 .eachCompany {
   background-color: rgba(250,250,250,0.6);
-  margin: 5px 0px 5px 0px;
-  padding: 1px;
+  margin: 5px 10px;
+  padding: 5px 10px;
   border-radius: 5px;
   h2 {
     margin-top: 10px;
+  }
+}
+
+.eachJob {
+  background-color: rgba(250,250,250,0.6);
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  h2 {
+    margin-top: 10px;
+  }
+}
+
+.jobsList {
+  list-style-type: none;
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+}
+
+.searchData {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 2em;
+  span {
+    color: white;
+  }
+  input {
+    border-radius: 5px;
+    border: 1px solid white;
   }
 }
 
@@ -61,6 +132,11 @@ body {
 #directives-calendar {
   margin-left: 40px;
   margin-right: 40px;
+}
+
+.unstyled {
+  list-style-type: none;
+  padding: 20px;
 }
 
 .calAlert{
