@@ -57,18 +57,30 @@ body {
   }
 }
 
-.mainLinks {
-  padding: 0px;
-}
-
 .mainPages {
   list-style-type: none;
   padding: 0px;
-  li {
+  margin: 0px;
+
+  .mainLinks {
+    position: relative;
+    border-radius: 100%;
     display: inline-block;
-    background-color: black;
-    img {
-      height: 300px;
+    width: 33%;
+    a {
+      width: 100%;
+      .btnComp, .btnJob, .btnEvt {
+        display: none;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        font-size: 2em;
+      }
+      img {
+        height: 300px;
+        border: 7px solid grey;
+        width: 100%;
+      }
     }
   }
 }
