@@ -1,6 +1,9 @@
 body {
-  background-image: Url("http://subtlepatterns.com/patterns/tweed.png");
-  background-attachment: fixed; }
+  background-image: linear-gradient(#a1a8b1 0px, #1b2d46 100%);
+  background-attachment: fixed;
+  background-size: 100%;
+  margin: 0px;
+  padding: 0px; }
   body header {
     text-align: right;
     margin-top: 10px;
@@ -38,41 +41,85 @@ body {
       border: 1px solid grey;
       background-color: rgba(250, 250, 250, 0.5); }
 
-.logoDiv {
-  text-align: center;
-  height: 350px; }
-  .logoDiv img {
-    margin-top: 50px;
-    background-color: rgba(250, 250, 250, 0.3); }
-
-.mainPages {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px; }
-  .mainPages .mainLinks {
-    position: relative;
-    border-radius: 100%;
-    display: inline-block;
-    width: 33%; }
-    .mainPages .mainLinks a {
-      width: 100%; }
-      .mainPages .mainLinks a .btnComp, .mainPages .mainLinks a .btnJob, .mainPages .mainLinks a .btnEvt {
-        display: none;
-        position: absolute;
-        top: 50%;
-        margin-top: -25px;
-        font-size: 2em; }
-      .mainPages .mainLinks a img {
-        height: 300px;
-        border: 7px solid grey;
-        width: 100%; }
+.mainWrapper {
+  background-image: Url("../images/computer3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -20px; }
+  .mainWrapper .admin {
+    padding-top: 5px;
+    padding-right: 5px; }
+    .mainWrapper .admin a {
+      text-decoration: none; }
+  .mainWrapper .logoDiv {
+    text-align: center;
+    height: 600px; }
+    .mainWrapper .logoDiv img {
+      margin-top: 75px; }
 
 .aboutTC {
   text-align: center;
-  margin-bottom: 20px;
-  color: white; }
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background-color: white;
+  color: #2A6496; }
   .aboutTC p {
     font-size: 2em; }
+
+.localMap {
+  position: relative;
+  background-image: Url("../images/Map.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  margin-top: 0px;
+  overflow: auto;
+  text-align: center; }
+  .localMap p {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    width: 40%;
+    font-size: 2em;
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    color: #2A6496; }
+
+.jobsAndEvents {
+  padding: 50px 0px;
+  width: 100%;
+  background-color: white;
+  color: #2A6496; }
+  .jobsAndEvents section {
+    text-align: center; }
+    .jobsAndEvents section .mainJobs {
+      width: 40%;
+      display: inline-block;
+      margin-right: 5px;
+      border: 1px solid #2A6496;
+      padding-bottom: 10px;
+      background-color: #2A6496;
+      color: white; }
+      .jobsAndEvents section .mainJobs h2 {
+        margin-top: 10px; }
+    .jobsAndEvents section .mainEvents {
+      width: 40%;
+      display: inline-block;
+      margin-left: 5px;
+      border: 1px solid #2A6496;
+      padding-bottom: 10px;
+      background-color: #2A6496;
+      color: white; }
+      .jobsAndEvents section .mainEvents h2 {
+        margin-top: 10px; }
+
+.mainFooter {
+  text-align: center;
+  background-color: white;
+  color: #2A6496; }
 
 .angular-google-map-container {
   height: 600px; }

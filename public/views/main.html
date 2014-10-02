@@ -1,54 +1,49 @@
+<div class="mainWrapper">
+  <div class="admin">
+    <h3><a href="#/companies/list">Companies</a> | <a href="#/jobs/list">Jobs</a> | <a href="#/events/list">Events</a> | <a href="" ng-click="admin=!admin">Admin</a></h3>
+  </div>
 
-<div class="admin">
-  <button class="btn btn-success" ng-click="admin=!admin">Admin</button>
+  <form ng-show="admin" ng-submit="login(username, password)">
+    <label>User name</label>
+    <input type="text" ng-model="username" class="ng-pristine ng-valid">
+    <label>Password</label>
+    <input type="password" ng-model="password" class="ng-pristine ng-valid">
+    <br/>
+    {{loginError}}  {{loggedUser}}
+    <br/><br/>
+    <button class="btn btn-success" type="submit">Submit</button>
+    <button class="btn btn-warning" ng-click="admin=!admin">Cancel</button>
+  </form>
+
+  <div class="logoDiv">
+    <img class="logo" src="../images/techConnect.png" alt="">
+  </div>
 </div>
-
-<form ng-show="admin" ng-submit="login(username, password)">
-  <label>User name</label>
-  <input type="text" ng-model="username" class="ng-pristine ng-valid">
-  <label>Password</label>
-  <input type="password" ng-model="password" class="ng-pristine ng-valid">
-  <br/>
-  {{loginError}}  {{loggedUser}}
-  <br/><br/>
-  <button class="btn btn-success" type="submit">Submit</button>
-  <button class="btn btn-warning" ng-click="admin=!admin">Cancel</button>
-</form>
-
-<div class="logoDiv">
-  <img class="logo" src="../images/techConnect.png" alt="">
-</div>
-
-<hr>
-
-<div class="">
-  <ul class="mainPages">
-    <li class="mainLinks">
-      <a class="comp" href="#/companies/list">
-        <img class="mainLinks compImg" src="http://www.852cmd.com/wp-content/uploads/2013/04/852-cmd-local-business-web-design.jpg" alt="">
-        <button class="btnComp btn btn-success btn-lg">View Companies</button>
-      </a>
-    </li>
-    <li class="mainLinks work">
-      <a href="#/jobs/list">
-        <img class="mainLinks workImg" src="http://o2.aolcdn.com/dims-shared/dims3/PATCH/format/jpg/quality/82/resize/1024x768/http://hss-prod.hss.aol.com/hss/storage/patch/9189152a2b29cd967f89e0801fc07cd5" alt="">
-        <div class="testTest">
-          <button class="btnJob btn btn-success btn-lg">View Jobs</button>
-        </div>
-      </a>
-    </li>
-    <li class="mainLinks evt">
-      <a href="#/events/list">
-        <img class="mainLinks evtImg" src="http://rack.1.mshcdn.com/media/ZgkyMDEzLzA1LzA3L2EwL2NhbGVuZGFyLjU0MzEzLmpwZwpwCXRodW1iCTk1MHg1MzQjCmUJanBn/e4067598/21f/calendar.jpg" alt="">
-        <button class="btnEvt btn btn-success btn-lg">View Events</button>
-      </a>
-    </li>
-  </ul>
-</div>
-
-<hr>
 
 <div class="aboutTC">
   <h1>About Tech Connect</h1>
   <p>Tech Connect is a website where everyone looking to work in the Charleston area can come to find great companies, see if they are hiring, and find events that are going on around the Lowcountry!</p>
 </div>
+
+<div class="localMap">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate itaque pariatur, minus molestias enim iste. Dignissimos tempore ea odit, porro quas deserunt quis officia eveniet voluptate distinctio? Maiores, sed, deserunt. <br> <a href="#/companies/list"><button class="btn btn-lg btn-success">View Locol Companies</button></a></p>
+</div>
+
+<div class="jobsAndEvents">
+  <section>
+    <div class="mainJobs">
+      <h2>Jobs</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, adipisci veritatis tenetur nam officiis reiciendis saepe quos ullam perferendis voluptas eius porro delectus est fuga, odit quas non odio debitis.</p>
+      <a href=""><button>View Jobs</button></a>
+    </div>
+    <div class="mainEvents">
+      <h2>Events</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aliquam a ullam dolorem, sunt at non veritatis, vero ex repellat, est molestiae. Accusantium rem, suscipit tempore quas, molestias error sit.</p>
+      <a href=""><button> View Local Events</button></a>
+    </div>
+  </section>
+</div>
+
+<footer class="mainFooter">
+  © 2014 Site by Chris Otten. All rights reserved.
+</footer>
