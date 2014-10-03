@@ -20,6 +20,11 @@ body {
 #adminIntro {
   text-align: center; }
 
+.well {
+  width: 370px;
+  position: fixed;
+  right: 10px; }
+
 .btn {
   background-color: #2A6496;
   color: white;

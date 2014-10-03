@@ -5,6 +5,7 @@
         .module('finalProject')
         .controller('adminCtrl',['$scope', '$location', function ($scope, $location){
 
+          
           var today = new Date();
           var hourNow = today.getHours();
           $scope.greeting;
