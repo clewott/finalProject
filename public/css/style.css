@@ -263,3 +263,7 @@ body {
 
 .calTools {
   margin-bottom: 10px; }
+
+.twitterFeed {
+  width: 100%;
+  text-align: center; }
