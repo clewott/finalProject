@@ -1,23 +1,37 @@
 <div class="mainWrapper">
   <div class="admin">
-    <h3><a href="#/companies/list">Companies</a> | <a href="#/jobs/list">Jobs</a> | <a href="#/events/list">Events</a> | <a href="" ng-click="admin=!admin">Admin</a></h3>
+    <h3><a href="#/companies/list">Companies</a> | <a href="#/jobs/list">Jobs</a> | <a href="#/events/list">Events</a> | <a href="" data-toggle="modal" data-target="#myModal">Admin</a></h3>
   </div>
 
-  <form ng-show="admin" ng-submit="login(username, password)">
-    <label>User name</label>
-    <input type="text" ng-model="username" class="ng-pristine ng-valid">
-    <label>Password</label>
-    <input type="password" ng-model="password" class="ng-pristine ng-valid">
-    <br/>
-    {{loginError}}  {{loggedUser}}
-    <br/><br/>
-    <button class="btn btn-success" type="submit">Submit</button>
-    <button class="btn btn-warning" ng-click="admin=!admin">Cancel</button>
-  </form>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Admin Login Form:</h4>
+      </div>
+      <div class="modal-body">
+        <form ng-submit="login(username, password)">
+          <label>User name</label>
+          <input type="text" ng-model="username">
+          <label>Password</label>
+          <input type="password" ng-model="password">
+          <br/>
+          {{loginError}}  {{loggedUser}}
+          <br/>
+          <button class="btn btn-primary" type="submit" ng-click="hideModal()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
   <div class="logoDiv">
     <img class="logo" src="../images/techConnect.png" alt="">
   </div>
+
+  <button class="downBtn" ng-click="scrollTo('mainMap')"><i class="fa fa-angle-down"></i></button>
+
 </div>
 
 <div class="aboutTC">
@@ -25,7 +39,7 @@
   <p>Tech Connect is a website where everyone looking to work in the Charleston area can come to find great companies, see if they are hiring, and find events that are going on around the Lowcountry!</p>
 </div>
 
-<div class="localMap">
+<div id="mainMap" class="localMap">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate itaque pariatur, minus molestias enim iste. Dignissimos tempore ea odit, porro quas deserunt quis officia eveniet voluptate distinctio? Maiores, sed, deserunt. <br> <a href="#/companies/list"><button class="btn btn-lg btn-success">View Locol Companies</button></a></p>
 </div>
 

@@ -3,21 +3,25 @@
 
     angular
         .module('finalProject')
-        .controller('homeCtrl',['$scope', '$location', function ($scope, $location) {
+        .controller('homeCtrl',['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
 
-          $scope.templates =
-          [
-            { url: 'login.html' },
-            { url: 'home.html' }
-          ];
-            $scope.template = $scope.templates[0];
+          $scope.hideModal = function () {
+            $('#myModal').modal('hide');
+          }
+
           $scope.login = function (username, password) {
+            console.log($('#myModal'));
             if ( username === 'admin' && password === '1234') {
                 $location.path('/admin');
             } else {
                 $scope.loginError = "Invalid username/password combination";
             };
           };
+
+          $scope.scrollTo = function(id) {
+            $location.hash(id);
+            $anchorScroll();
+          }
 
           $(".comp").on("mouseover", function() {
             $(".btnComp").css("display", "block");
