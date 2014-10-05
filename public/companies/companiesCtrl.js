@@ -26,7 +26,7 @@
 
                 });
 
-                $location.path('/admin/companies');
+                $location.path('/admin');
             };
 
             function createMarkers(companies) {
@@ -56,13 +56,13 @@
 
                 });
 
-                $location.path('/admin/companies');
+                $location.path('/admin');
             };
 
             $scope.deleteCompany = function (company) {
                 companiesSvc.deleteCompany(company);
                   console.log("company deleted");
-                  $location.path('/admin/companies');
+                  $location.path('/admin');
             };
 
             var geocoder = new google.maps.Geocoder();

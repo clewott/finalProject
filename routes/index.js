@@ -4,5 +4,5 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Tech Connect', ngApp: 'finalProject' });
+  res.render('index', { title: 'TechConnect', ngApp: 'finalProject' });
 };

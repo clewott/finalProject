@@ -1,8 +1,5 @@
 body {
-  /* background-image: linear-gradient(rgb(204,204,204) 0px, rgb(42,100,150) 100%); */
   background-color: #f2f2f2;
-  background-attachment: fixed;
-  background-size: 100%;
   margin:0px;
   padding: 0px;
   header {
@@ -23,6 +20,29 @@ body {
 
 #adminIntro {
   text-align: center;
+}
+
+.adminView {
+  width: 100%;
+  text-align: center;
+  section {
+    width: 49.7%;
+    height: 100px;
+    display: inline-block;
+    vertical-align: top;
+    .adminCompanies {
+
+    }
+  }
+  aside {
+    width: 49.7%;
+    height: 100px;
+    display: inline-block;
+    vertical-align: top;
+    .adminJobs {
+
+    }
+  }
 }
 
 .btn {
@@ -68,6 +88,9 @@ body {
   background-position: center;
   margin-top: -20px;
   position: relative;
+  @media (max-width: 1250px) {
+    height: 575px;
+  }
   .admin {
     padding-top: 5px;
     padding-right: 5px;
@@ -81,6 +104,10 @@ body {
     height: 600px;
     img {
       margin-top: 75px;
+      height: 200px;
+      background-color: rgba(250, 250, 250, 0.5);
+      padding: 5px;
+      border-radius: 5px;
     }
   }
   .downBtn {
@@ -91,8 +118,8 @@ body {
     margin: 0 auto;
     font-size: 3em;
     border-radius: 100%;
-    background-color: black;
-    border: 1px solid black;
+    background-color: #428BCA;
+    border: 1px solid #428BCA;
     color: white;
     width: 60px;
     -webkit-transform: translateZ(0);

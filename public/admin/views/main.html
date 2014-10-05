@@ -1,19 +1,35 @@
 <header class="adminHeader">
-  <a href="#/"><button class="btn btn-lg btn-success">Home Page</button></a>
+  <a href="#/"><button class="btn btn-success">Home Page</button></a>
+  <a href="#/admin/companies/create"><button class="btn btn-warning">Add A Company</button></a>
+  <a href="#/admin/jobs/create"><button class="btn btn-warning">Add Job</button></a>
 </header>
 
 <div>
   <h3 id="adminIntro">{{greeting}}</h3>
 </div>
 
-<div>
-  <h3>Companies:</h3>
-  <a href="#/admin/companies"><button class="btn btn-lg btn-warning">View Current Companies</button></a>
-  <a href="#/admin/companies/create"><button class="btn btn-lg btn-warning">Add A Company</button></a>
-</div>
-
-<div>
-  <h3>Jobs</h3>
-  <a href="#/admin/jobs/"><button class="btn btn-lg btn-warning">View Current Jobs</button></a>
-  <a href="#/admin/jobs/create"><button class="btn btn-lg btn-warning">Add A Job</button></a>
+<div class="adminView">
+  <section class="adminCompanies" ng-controller="companiesCtrl">
+    <p class="searchData"><span>Search Companies: </span><input ng-model="query"></p>
+    <div class="eachCompany" data-ng-repeat="building in companies | orderBy:'title' | filter:query">
+      <h2>{{building.title}}</h2>
+      <p>Website: <a ng-href="http://{{building.url}}" target="_blank">{{building.url}}</a></p>
+      <p>Address: {{building.location}}</p>
+      <p>Phone Number: {{building.phoneNumber}}</p>
+      <p>Email Address: {{building.email}}</p>
+      <a href="#/admin/companies/{{building._id}}/update"><button class="btn btn-info">Update Information</button></a>
+      <button ng-click="deleteCompany(building)" class="btn btn-danger">Remove Company</button>
+    </div>
+  </section>
+  <aside class="adminJobs" ng-controller="jobsCtrl">
+    <p class="searchData"><span>Search Jobs: </span><input ng-model="query"><p>
+    <div class="eachJob" data-ng-repeat="position in jobs | filter:query">
+      <h2>{{position.title}}</h2>
+      <p>Company: {{position.company}}</p>
+      <p>Job URL: <a ng-href="{{position.url}}" target="_blank">{{position.url}}</a></p>
+      <p>Contact Email Address: {{position.email}}</p>
+      <a href="#/admin/jobs/{{position._id}}/update"><button class="btn btn-info">Update Job</button></a>
+      <button ng-click="deleteJob(position)" class="btn btn-danger">Remove Job</button>
+    </div>
+  </aside>
 </div>
