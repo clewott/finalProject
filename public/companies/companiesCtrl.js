@@ -37,7 +37,8 @@
                 {
                   title: companies[i].title,
                   map: map,
-                  position: latLong
+                  position: latLong,
+                  icon: image
                 });
 
               }
@@ -65,6 +66,7 @@
                   $location.path('/admin');
             };
 
+            var image = 'images/pin.png';
             var geocoder = new google.maps.Geocoder();
             var map;
             function initialize() {
@@ -82,7 +84,8 @@
                 var marker = new google.maps.Marker({
                   title: companies[i].title,
                   map: map,
-                  position: new google.maps.LatLng(companies[i].geo.lat,companies[i].geo.lng)
+                  position: new google.maps.LatLng(companies[i].geo.lat,companies[i].geo.lng),
+                  icon: image
                 });
 
               }
