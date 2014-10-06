@@ -1,3 +1,6 @@
+<header>
+  <img class="pageLogo" src="../images/TechConnectLogo_2.svg" alt="">
+</header>
 <div class="createCompany">
   <h2>Create A Company</h2>
   <form ng-submit="createCompany(company)">
@@ -10,7 +13,7 @@
       <option value="true">We Are Hiring</option>
       <option value="false">We Are Not Hiring</option>
     </select>
-    <textarea name="" id="" cols="30" rows="10" data-ng-model="company.technologies" placeholder="Company Technologies" required></textarea><br>
+    <textarea name="" id="" cols="30" rows="7" data-ng-model="company.technologies" placeholder="Company Technologies" required></textarea><br>
     <button type="submit" class="btn btn-lg btn-success">Create</button>
     <a href="#/admin"><button class="btn btn-lg btn-warning">Cancel</button></a>
   </form>

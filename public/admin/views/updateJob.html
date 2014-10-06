@@ -1,3 +1,6 @@
+<header>
+  <img class="pageLogo" src="../images/TechConnectLogo_2.svg" alt="">
+</header>
 <div class="editJob">
   <h2>Update Job Listing</h2>
   <form data-ng-submit="editJob(job)">
@@ -9,7 +12,7 @@
         <option value="Front End Engineer">Front End Engineer</option>
         <option value="Back End Engineer">Back End Engineer</option>
       </select><br>
-      <textarea cols="30" rows="10" data-ng-model="job.description" value="job.description"></textarea><br>
+      <textarea cols="30" rows="7" data-ng-model="job.description" value="job.description"></textarea><br>
       <input type="text" data-ng-model="job.email" value="job.email"><br>
       <button type="submit" class="btn btn-lg btn-success">Update Job</button>
       <a href="#/admin"><button class="btn btn-lg btn-danger">Cancel</button></a>

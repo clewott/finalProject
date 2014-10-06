@@ -1,11 +1,12 @@
 <header>
+  <img class="pageLogo" src="../images/TechConnectLogo_2.svg" alt="">
   <a href="#/"><button class="btn btn-danger">Home</button></a>
   <a href="#/companies/map"><button class="btn btn-danger">Map View</button></a>
   <a href="#/jobs/list"><button class="btn btn-danger">Jobs</button></a>
   <a href="#/events/list"><button class="btn btn-danger">Events</button></a>
   <p class="searchData"><span>Search Companies: </span><input ng-model="query"></p>
 </header>
-<hr>
+
 <section class="allCompanies" data-ng-repeat="company in companies | orderBy:'title' | filter:query">
     <div class="eachCompany">
       <h2>{{company.title}}</h2>

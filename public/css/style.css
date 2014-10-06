@@ -3,9 +3,14 @@ body {
   margin: 0px;
   padding: 0px; }
   body header {
+    position: relative;
     text-align: right;
     margin-top: 10px;
     margin-right: 10px; }
+    body header .pageLogo {
+      position: absolute;
+      left: 10px;
+      height: 75px; }
   body .adminHeader {
     text-align: center; }
 
@@ -66,17 +71,19 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: -20px;
   position: relative; }
   @media (max-width: 1250px) {
     .mainWrapper {
-      height: 575px; } }
+      height: 565px; } }
   .mainWrapper .admin {
     padding-top: 5px;
     padding-right: 5px;
     text-align: right; }
     .mainWrapper .admin a {
       text-decoration: none; }
+    .mainWrapper .admin button:hover {
+      background-color: white;
+      color: black; }
   .mainWrapper .logoDiv {
     text-align: center;
     height: 600px; }
@@ -94,16 +101,17 @@ body {
     margin: 0 auto;
     font-size: 3em;
     border-radius: 100%;
-    background-color: #428BCA;
-    border: 1px solid #428BCA;
+    background-color: #3B83BE;
+    border: 1px solid #3B83BE;
     color: white;
-    width: 60px;
-    -webkit-transform: translateZ(0); }
+    width: 60px; }
+    @media (max-width: 1250px) {
+      .mainWrapper .downBtn {
+        top: 94%; } }
   .mainWrapper button:hover {
     background-color: #2A6496;
     color: white;
-    border: 1px solid #2A6496;
-    -webkit-transform: translateZ(0); }
+    border: 1px solid #2A6496; }
 
 .aboutTC {
   text-align: center;
@@ -191,29 +199,30 @@ body {
   .theMap #map {
     height: 550px; }
 
-.allCompanies .eachCompany {
+.eachCompany {
   position: relative;
   background-color: rgba(42, 100, 150, 0.5);
   margin: 5px 10px;
   padding: 5px 10px;
   border-radius: 5px; }
-  .allCompanies .eachCompany h2 {
+  .eachCompany h2 {
     margin-top: 10px; }
-  .allCompanies .eachCompany .hiring {
+  .eachCompany .hiring {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 2em; }
-    .allCompanies .eachCompany .hiring a {
-      color: green;
+    .eachCompany .hiring a {
+      color: #3D8B37;
       text-decoration: none; }
-    .allCompanies .eachCompany .hiring a:hover {
-      color: black; }
+    .eachCompany .hiring a:hover {
+      color: green; }
 
 .eachJob {
   position: relative;
   background-color: rgba(42, 100, 150, 0.5);
   margin: 5px 10px;
+  margin-top: 60px;
   padding: 5px 10px;
   border-radius: 5px; }
   .eachJob h2 {
@@ -228,6 +237,7 @@ body {
     max-height: 200px; }
 
 .jobsList {
+  margin-top: 50px;
   list-style-type: none;
   text-align: center; }
   .jobsList li {
@@ -241,9 +251,9 @@ body {
     color: #2A6496; }
   .searchData input {
     border-radius: 5px;
-    border: 1px solid #f2f2f2;
-    background-color: rgba(42, 100, 150, 0.7);
-    color: white; }
+    border: 1px solid #3B83BE;
+    background-color: #f2f2f2;
+    color: black; }
 
 /*** Calendar ***/
 .calHeader {

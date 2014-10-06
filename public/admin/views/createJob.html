@@ -1,3 +1,6 @@
+<header>
+  <img class="pageLogo" src="../images/TechConnectLogo_2.svg" alt="">
+</header>
 <div class="createJob">
   <h2>Create a Job</h2>
   <form>
@@ -11,7 +14,7 @@
       <option value="Back End Engineer">Back End Engineer</option>
     </select>
     <input type="url" data-ng-model="job.logo" placeholder="Company Logo URL">
-    <textarea cols="30" rows="10" data-ng-model="job.description" placeholder="Job Description"></textarea>
+    <textarea cols="30" rows="7" data-ng-model="job.description" placeholder="Job Description"></textarea>
     <button data-ng-click="createJob(job)" class="btn btn-lg btn-success">Add Job</button>
     <a href="#/admin"><button class="btn btn-lg btn-warning">Cancel</button></a>
   </form>
