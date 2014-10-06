@@ -19,10 +19,11 @@
             };
           };
 
-          $scope.scrollTo = function(id) {
-            $location.hash(id);
-            $anchorScroll();
-          }
+          $(".downBtn").click(function() {
+              $('body').animate({
+                  scrollTop: $("#mainMap").offset().top
+              }, 500);
+          });
 
 
           $scope.isCollapsed = true;

@@ -88,6 +88,15 @@
                   icon: image
                 });
 
+                var infowindow = new google.maps.InfoWindow({
+                  maxWidth: 150
+                });
+
+                google.maps.event.addListener(marker, 'click', function(){
+                    infowindow.setContent('Company: ' + this.title);
+                    infowindow.open(map, this);
+                });
+
               }
 
             }

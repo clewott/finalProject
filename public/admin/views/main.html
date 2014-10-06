@@ -24,7 +24,7 @@
   </section>
   <aside class="adminJobs" ng-controller="jobsCtrl">
     <p class="searchData"><span>Search Jobs: </span><input ng-model="query"><p>
-    <div class="eachJob" data-ng-repeat="position in jobs | filter:query">
+    <div class="eachJob eachAdminJob" data-ng-repeat="position in jobs | filter:query">
       <h2>{{position.title}}</h2>
       <p>Company: {{position.company}}</p>
       <p>Job URL: <a ng-href="{{position.url}}" target="_blank">{{position.url}}</a></p>
