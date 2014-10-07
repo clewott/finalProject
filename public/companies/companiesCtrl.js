@@ -81,19 +81,21 @@
 
               for(var i = 0; i< companies.length; i++) {
 
+                var content = "Company: " + companies[i].title + "<br>" + "URL: " + "<a href='http://" + companies[i].url + "' target='_blank'>" + companies[i].url + "</a>" + "<br>" + "Email: " + companies[i].email;
                 var marker = new google.maps.Marker({
-                  title: companies[i].title,
                   map: map,
                   position: new google.maps.LatLng(companies[i].geo.lat,companies[i].geo.lng),
-                  icon: image
+                  icon: image,
+                  html: content
                 });
 
                 var infowindow = new google.maps.InfoWindow({
-                  maxWidth: 150
+                  maxWidth: 225
                 });
 
+
                 google.maps.event.addListener(marker, 'click', function(){
-                    infowindow.setContent('Company: ' + this.title);
+                    infowindow.setContent(this.html);
                     infowindow.open(map, this);
                 });
 

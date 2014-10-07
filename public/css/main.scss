@@ -31,17 +31,36 @@ body {
 .adminView {
   width: 100%;
   text-align: center;
-  section {
+  .adminCompanies  {
     width: 49.7%;
-    height: 100px;
     display: inline-block;
     vertical-align: top;
-    .adminCompanies {
+    .eachCompany {
+      position: relative;
+      background-color: rgba(42,100,150,0.5);
+      margin: 5px 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      h2 {
+        margin-top: 10px;
+      }
+      .hiring {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2em;
+        a {
+          color: #3D8B37;
+          text-decoration: none;
+        }
+        a:hover {
+          color: green;
+        }
+      }
     }
   }
   aside {
     width: 49.7%;
-    height: 100px;
     display: inline-block;
     vertical-align: top;
     .adminJobs {
@@ -64,14 +83,13 @@ body {
 .createCompany, .createJob, .editCompany, .editJob {
   text-align: center;
   font-size: 1.5em;
-  background-color: #1B85B7;
+  background-color: rgba(42,100,150,0.5);
   width:40%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
   h2 {
     padding-top: 10px;
-    color: white;
   }
   form {
     padding-bottom: 10px;
@@ -91,7 +109,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-  @media (max-width: 1250px) {
+  @media (max-height: 617px) {
     height: 565px;
   }
   .admin {
@@ -115,6 +133,12 @@ body {
       background-color: rgba(250, 250, 250, 0.5);
       padding: 5px;
       border-radius: 5px;
+      @media (max-width: 600px) {
+        height: 150px;
+      }
+      @media (max-width: 450px) {
+        height: 100px;
+      }
     }
   }
   .downBtn {
@@ -161,6 +185,9 @@ body {
   overflow: auto;
   text-align: center;
   filter: gray;
+  @media (max-width: 650px) {
+    height: 300px;
+  }
   p {
     position: absolute;
     top:5%;
@@ -170,7 +197,7 @@ body {
     background-color: rgba(250,250,250,0.5);
     border-radius: 5px;
     padding: 10px;
-    text-align: left;
+    text-align: center;
     color: #2A6496;
   }
   @media (max-width: 1100px) {
@@ -180,7 +207,17 @@ body {
   }
   @media (max-width: 650px) {
     p {
-      font-size: 1.2em;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 60%;
+    }
+  }
+  @media (max-width: 575px) {
+    p {
+      height: 80%;
     }
   }
 }
@@ -202,8 +239,17 @@ body {
       background-color: #2A6496;
       color: white;
       font-size: 1.5em;
+      @media (max-width: 650px) {
+        display: block;
+        width: 100%;
+        margin: 0px;
+        border-radius: 0px;
+      }
       h2 {
         margin-top:10px;
+      }
+      .btn {
+        border: 1px solid #f2f2f2;
       }
     }
     .mainEvents {
@@ -216,8 +262,19 @@ body {
       background-color: #2A6496;
       color: white;
       font-size: 1.5em;
+      vertical-align: top;
+      @media (max-width: 650px) {
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0px;
+        border-radius: 0px;
+      }
       h2 {
         margin-top:10px;
+      }
+      .btn {
+        border: 1px solid #f2f2f2;
       }
     }
   }
@@ -235,6 +292,7 @@ body {
 
 .theMap {
   width: 90%;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -244,32 +302,31 @@ body {
   }
 }
 
-
-.eachCompany {
-  position: relative;
-  background-color: rgba(42,100,150,0.5);
-  margin: 5px 10px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  h2 {
-    margin-top: 10px;
-  }
-  .hiring {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2em;
-    a {
-      color: #3D8B37;
-      text-decoration: none;
+.allCompanies {
+  .eachCompany {
+    position: relative;
+    background-color: rgba(42,100,150,0.5);
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    h2 {
+      margin-top: 10px;
     }
-    a:hover {
-      color: green;
+    .hiring {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 2em;
+      a {
+        color: #3D8B37;
+        text-decoration: none;
+      }
+      a:hover {
+        color: green;
+      }
     }
   }
 }
-
-
 
 .eachJob {
   position: relative;
@@ -311,7 +368,6 @@ body {
 }
 
 .jobsList {
-  margin-top: 50px;
   list-style-type: none;
   text-align: center;
   li {
@@ -320,7 +376,7 @@ body {
 }
 
 .searchData {
-  margin-top: 10px;
+  margin-top: 50px;
   text-align: center;
   font-size: 2em;
   span {
@@ -340,11 +396,6 @@ body {
   color: #2A6496;
 }
 
-#directives-calendar {
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
 .unstyled {
   list-style-type: none;
   padding: 20px;
@@ -361,9 +412,7 @@ body {
 .well {
   background-color: rgba(42,100,150,0.6);
   border-radius: 5px;
-  width: 700px;
-  position: absolute;
-  right: 10px;
+  width: 100%;
 }
 
 .calWell{
@@ -392,13 +441,34 @@ body {
 	margin-bottom: 10px;
 }
 
-.twitterFeed {
-  width: 90%;
-  margin-left: 10px;
-}
-
 .well-lg {
   width: 370px;
   position: fixed;
   right: 10px;
+}
+
+.eventMain {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  .eventCal {
+    display: inline-block;
+    vertical-align: top;
+    width: 59%;
+    @media (max-width: 1000px) {
+      width: 98%;
+      margin: 0px auto;
+      display: block;
+      text-align: center;
+    }
+  }
+  .eventTwitter {
+    display: inline-block;
+    width: 40%;
+    @media (max-width: 1000px) {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
 }

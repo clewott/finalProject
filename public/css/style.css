@@ -25,14 +25,30 @@ body {
 .adminView {
   width: 100%;
   text-align: center; }
-  .adminView section {
+  .adminView .adminCompanies {
     width: 49.7%;
-    height: 100px;
     display: inline-block;
     vertical-align: top; }
+    .adminView .adminCompanies .eachCompany {
+      position: relative;
+      background-color: rgba(42, 100, 150, 0.5);
+      margin: 5px 10px;
+      padding: 5px 10px;
+      border-radius: 5px; }
+      .adminView .adminCompanies .eachCompany h2 {
+        margin-top: 10px; }
+      .adminView .adminCompanies .eachCompany .hiring {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2em; }
+        .adminView .adminCompanies .eachCompany .hiring a {
+          color: #3D8B37;
+          text-decoration: none; }
+        .adminView .adminCompanies .eachCompany .hiring a:hover {
+          color: green; }
   .adminView aside {
     width: 49.7%;
-    height: 100px;
     display: inline-block;
     vertical-align: top; }
 
@@ -49,14 +65,13 @@ body {
 .createCompany, .createJob, .editCompany, .editJob {
   text-align: center;
   font-size: 1.5em;
-  background-color: #1B85B7;
+  background-color: rgba(42, 100, 150, 0.5);
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px; }
   .createCompany h2, .createJob h2, .editCompany h2, .editJob h2 {
-    padding-top: 10px;
-    color: white; }
+    padding-top: 10px; }
   .createCompany form, .createJob form, .editCompany form, .editJob form {
     padding-bottom: 10px; }
     .createCompany form input, .createCompany form textarea, .createCompany form select, .createJob form input, .createJob form textarea, .createJob form select, .editCompany form input, .editCompany form textarea, .editCompany form select, .editJob form input, .editJob form textarea, .editJob form select {
@@ -72,7 +87,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative; }
-  @media (max-width: 1250px) {
+  @media (max-height: 617px) {
     .mainWrapper {
       height: 565px; } }
   .mainWrapper .admin {
@@ -93,6 +108,12 @@ body {
       background-color: rgba(250, 250, 250, 0.5);
       padding: 5px;
       border-radius: 5px; }
+      @media (max-width: 600px) {
+        .mainWrapper .logoDiv img {
+          height: 150px; } }
+      @media (max-width: 450px) {
+        .mainWrapper .logoDiv img {
+          height: 100px; } }
   .mainWrapper .downBtn {
     position: absolute;
     top: 95%;
@@ -132,6 +153,9 @@ body {
   overflow: auto;
   text-align: center;
   filter: gray; }
+  @media (max-width: 650px) {
+    .localMap {
+      height: 300px; } }
   .localMap p {
     position: absolute;
     top: 5%;
@@ -141,14 +165,22 @@ body {
     background-color: rgba(250, 250, 250, 0.5);
     border-radius: 5px;
     padding: 10px;
-    text-align: left;
+    text-align: center;
     color: #2A6496; }
   @media (max-width: 1100px) {
     .localMap p {
       font-size: 1.5em; } }
   @media (max-width: 650px) {
     .localMap p {
-      font-size: 1.2em; } }
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 60%; } }
+  @media (max-width: 575px) {
+    .localMap p {
+      height: 80%; } }
 
 .jobsAndEvents {
   padding: 50px 0px;
@@ -167,8 +199,16 @@ body {
       background-color: #2A6496;
       color: white;
       font-size: 1.5em; }
+      @media (max-width: 650px) {
+        .jobsAndEvents section .mainJobs {
+          display: block;
+          width: 100%;
+          margin: 0px;
+          border-radius: 0px; } }
       .jobsAndEvents section .mainJobs h2 {
         margin-top: 10px; }
+      .jobsAndEvents section .mainJobs .btn {
+        border: 1px solid #f2f2f2; }
     .jobsAndEvents section .mainEvents {
       width: 40%;
       display: inline-block;
@@ -178,9 +218,19 @@ body {
       padding-bottom: 10px;
       background-color: #2A6496;
       color: white;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      vertical-align: top; }
+      @media (max-width: 650px) {
+        .jobsAndEvents section .mainEvents {
+          display: block;
+          width: 100%;
+          margin-top: 50px;
+          margin-left: 0px;
+          border-radius: 0px; } }
       .jobsAndEvents section .mainEvents h2 {
         margin-top: 10px; }
+      .jobsAndEvents section .mainEvents .btn {
+        border: 1px solid #f2f2f2; }
 
 .mainFooter {
   text-align: center;
@@ -192,6 +242,7 @@ body {
 
 .theMap {
   width: 90%;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -199,23 +250,23 @@ body {
   .theMap #map {
     height: 550px; }
 
-.eachCompany {
+.allCompanies .eachCompany {
   position: relative;
   background-color: rgba(42, 100, 150, 0.5);
   margin: 5px 10px;
   padding: 5px 10px;
   border-radius: 5px; }
-  .eachCompany h2 {
+  .allCompanies .eachCompany h2 {
     margin-top: 10px; }
-  .eachCompany .hiring {
+  .allCompanies .eachCompany .hiring {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 2em; }
-    .eachCompany .hiring a {
+    .allCompanies .eachCompany .hiring a {
       color: #3D8B37;
       text-decoration: none; }
-    .eachCompany .hiring a:hover {
+    .allCompanies .eachCompany .hiring a:hover {
       color: green; }
 
 .eachJob {
@@ -248,14 +299,13 @@ body {
   margin-top: 0px; }
 
 .jobsList {
-  margin-top: 50px;
   list-style-type: none;
   text-align: center; }
   .jobsList li {
     display: inline-block; }
 
 .searchData {
-  margin-top: 10px;
+  margin-top: 50px;
   text-align: center;
   font-size: 2em; }
   .searchData span {
@@ -270,10 +320,6 @@ body {
 .calHeader {
   text-align: center;
   color: #2A6496; }
-
-#directives-calendar {
-  margin-left: 40px;
-  margin-right: 40px; }
 
 .unstyled {
   list-style-type: none;
@@ -292,9 +338,7 @@ body {
 .well {
   background-color: rgba(42, 100, 150, 0.6);
   border-radius: 5px;
-  width: 700px;
-  position: absolute;
-  right: 10px; }
+  width: 100%; }
 
 .calWell {
   float: left;
@@ -317,11 +361,30 @@ body {
 .calTools {
   margin-bottom: 10px; }
 
-.twitterFeed {
-  width: 90%;
-  margin-left: 10px; }
-
 .well-lg {
   width: 370px;
   position: fixed;
   right: 10px; }
+
+.eventMain {
+  text-align: center;
+  width: 100%;
+  margin-top: 50px; }
+  .eventMain .eventCal {
+    display: inline-block;
+    vertical-align: top;
+    width: 59%; }
+    @media (max-width: 1000px) {
+      .eventMain .eventCal {
+        width: 98%;
+        margin: 0px auto;
+        display: block;
+        text-align: center; } }
+  .eventMain .eventTwitter {
+    display: inline-block;
+    width: 40%; }
+    @media (max-width: 1000px) {
+      .eventMain .eventTwitter {
+        width: 100%;
+        display: block;
+        text-align: center; } }

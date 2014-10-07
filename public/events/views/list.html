@@ -5,7 +5,32 @@
   <a href="#/jobs/list"><button class="btn btn-danger">Jobs</button></a>
 </header>
 
-<div role="main">
+<div class="eventMain">
+  <h2 class="calHeader">Local Charleston Tech Events</h2>
+  <section class="eventCal">
+    <div role="main">
+      <div class="container">
+        <section id="directives-calendar" ng-controller="eventsCtrl">
+          <div class="well">
+            <div class="row-fluid">
+              <div>
+                <div class="calendar" ng-model="eventSources" calendar="myCalendar1" config="uiConfig.calendar" ui-calendar="uiConfig.calendar">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+  <aside class="eventTwitter">
+    <div class="twitterFeed">
+      <a class="twitter-timeline" href="https://twitter.com/hashtag/chstech" data-widget-id="517838517804617728">#chstech Tweets</a>
+    </div>
+  </aside>
+</div>
+
+<!-- <div role="main">
   <div class="container">
     <h2 class="calHeader">Local Charleston Tech Events:</h2>
     <section id="directives-calendar" ng-controller="eventsCtrl">
@@ -19,8 +44,8 @@
       </div>
     </section>
   </div>
-</div>
+</div> -->
 
-<div class="twitterFeed">
+<!-- <div class="twitterFeed">
   <a class="twitter-timeline" href="https://twitter.com/hashtag/chstech" data-widget-id="517838517804617728">#chstech Tweets</a>
-</div>
+</div> -->
