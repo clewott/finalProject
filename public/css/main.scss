@@ -418,62 +418,17 @@ body {
   }
 }
 
-/*** Calendar ***/
-.calHeader {
-  text-align: center;
-  color: #2A6496;
-}
-
-.unstyled {
-  list-style-type: none;
-  padding: 20px;
-}
-
-.calAlert{
-	width: 595px; float: right; margin-bottom: 5px;
-}
-
-.calXBtn{
-	float: right; margin-top: -5px; margin-right: -5px;
-}
-
+/* Calendar */
 .well {
   background-color: rgba(42,100,150,0.6);
   border-radius: 5px;
   width: 100%;
 }
 
-.calWell{
-	float: left; margin-bottom: 40px;
-}
-
-.fc-content {
-  background-color: #2A6496;
-}
-
 .fc-toolbar {
   color: #2A6496;
 }
 
-.fc-event.openSesame .fc-event-skin{
-	background-color: rgb(229, 229, 11);
-	color: black;
-}
-
-.fc-event.customFeed .fc-event-skin{
-	background-color: rgb(132, 222, 175);
-	color: black;
-}
-
-.calTools{
-	margin-bottom: 10px;
-}
-
-.well-lg {
-  width: 370px;
-  position: fixed;
-  right: 10px;
-}
 
 .eventMain {
   text-align: center;
