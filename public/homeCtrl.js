@@ -3,7 +3,7 @@
 
     angular
         .module('finalProject')
-        .controller('homeCtrl',['$scope', '$location', '$anchorScroll', '$modal', function ($scope, $location, $anchorScroll, $modal) {
+        .controller('homeCtrl',['$scope', '$location', '$anchorScroll', '$modal', '$log', function ($scope, $location, $anchorScroll, $modal, $log) {
 
           // $scope.hideModal = function () {
           //   $('#myModal').modal('dismiss');
@@ -34,7 +34,7 @@
           $scope.open = function (size) {
 
             var modalInstance = $modal.open({
-              templateUrl: 'main.html',
+              templateUrl: 'views/modal.html',
               controller: 'ModalInstanceCtrl',
               size: size,
               resolve: {

@@ -1,7 +1,7 @@
 angular.module('finalProject').controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
 
   $scope.items = items;
-  
+
   $scope.selected = {
     item: $scope.items[0]
   };
