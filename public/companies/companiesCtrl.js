@@ -81,7 +81,7 @@
 
               for(var i = 0; i< companies.length; i++) {
 
-                var content = "Company: " + companies[i].title + "<br>" + "URL: " + "<a href='http://" + companies[i].url + "' target='_blank'>" + companies[i].url + "</a>" + "<br>" + "Email: " + companies[i].email;
+                var content = "Company: " + companies[i].title + "<br>" + "URL: " + "<a href='http://" + companies[i].url + "' target='_blank'>" + companies[i].url + "</a>" + "<br>" + "Email: " + "<a href='mailto:" + companies[i].email + "'>" + companies[i].email + "</a>";
                 var marker = new google.maps.Marker({
                   map: map,
                   position: new google.maps.LatLng(companies[i].geo.lat,companies[i].geo.lng),

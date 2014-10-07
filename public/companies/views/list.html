@@ -7,13 +7,12 @@
   <p class="searchData"><span>Search Companies: </span><input ng-model="query"></p>
 </header>
 
-<section class="allCompanies" data-ng-repeat="company in companies | orderBy:'title' | filter:query">
-  <div class="eachCompany">
-    <h2>{{company.title}}</h2>
-    <p class="hiring" ng-show="{{company.ifHiring}}"><a href="#/jobs/list">{{company.title}} is hiring!</a></p>
+<section class="userCompanies" data-ng-repeat="company in companies | orderBy:'title' | filter:query">
+  <div class="userCompany">
+    <h2>{{company.title}} <span class="hiring" ng-show="{{company.ifHiring}}"><a href="#/jobs/list">is hiring!</a></span></h2>
     <p>Website: <a ng-href="http://{{company.url}}" target="_blank">{{company.url}}</a></p>
     <p>Address: {{company.location}}</p>
     <p>Phone Number: {{company.phoneNumber}}</p>
-    <p>Email Address: {{company.email}}</p>
+    <p>Email Address: <a href="mailto:{{company.email}}">{{company.email}}</a></p>
   </div>
 </section>

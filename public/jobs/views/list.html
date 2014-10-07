@@ -18,7 +18,7 @@
 </header>
 
 <section data-ng-repeat="job in jobs | filter: search | filter: query">
-  <div class="eachJob">
+  <div class="userJob">
     <h2>{{job.title}}</h2>
     <p>Company: {{job.company}}</p>
     <p>Job URL: <a ng-href="http://{{job.url}}" target="_blank">{{job.url}}</a></p>
