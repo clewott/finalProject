@@ -3,7 +3,7 @@
 
     angular
         .module('finalProject')
-        .controller('homeCtrl',['$scope', '$location', '$anchorScroll', '$modal', '$log', function ($scope, $location, $anchorScroll, $modal, $log) {
+        .controller('homeCtrl',['$scope', '$location', '$anchorScroll', '$modal', '$log', '$window', function ($scope, $location, $anchorScroll, $modal, $log, $window) {
 
           // $scope.hideModal = function () {
           //   $('#myModal').modal('dismiss');
@@ -23,36 +23,24 @@
           $scope.isCollapsed = true;
 
 
-          $scope.items = ['item1', 'item2', 'item3'];
-
           $scope.open = function (size) {
 
-            var modalInstance = $modal.open({
+            $window.modalInstance = $modal.open({
               templateUrl: 'views/modal.html',
               controller: 'ModalInstanceCtrl',
-              size: size,
-              resolve: {
-                items: function () {
-                  return $scope.items;
-                }
-              }
-            });
-
-            modalInstance.result.then(function (selectedItem) {
-              $scope.selected = selectedItem;
-            }, function () {
-              $log.info('Modal dismissed at: ' + new Date());
+              size: size
             });
           };
 
           $scope.login = function (username, password) {
             console.log($('#myModal'));
+            console.log(modalInstance);
             if ( username === 'admin' && password === '1234') {
-                $location.path('/admin');
-
+                    $location.path('/admin');
+                    $window.modalInstance.close();
             } else {
                 $scope.loginError = "Invalid username/password combination";
-            };
+            }
           };
 
         }]);
