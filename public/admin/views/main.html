@@ -27,7 +27,7 @@
     <div class="eachJob eachAdminJob" data-ng-repeat="position in jobs | filter:query">
       <h2>{{position.title}}</h2>
       <p>Company: {{position.company}}</p>
-      <p>Job URL: <a ng-href="{{position.url}}" target="_blank">{{position.url}}</a></p>
+      <p>Job URL: <a ng-href="http://{{position.url}}" target="_blank">{{position.url}}</a></p>
       <p>Contact Email Address: {{position.email}}</p>
       <a href="#/admin/jobs/{{position._id}}/update"><button class="btn btn-info">Update Job</button></a>
       <button ng-click="deleteJob(position)" class="btn btn-danger">Remove Job</button>
