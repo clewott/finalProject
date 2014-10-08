@@ -1,1 +1,13 @@
-This is a test
+<div>
+  <div class="well-lg">
+    <form ng-submit="login(username, password)" ng-controller="homeCtrl">
+      <input type="text" ng-model="username" placeholder="Username">
+      <input type="password" ng-model="password" placeholder="Password">
+      <br/>
+      {{loginError}}  {{loggedUser}}
+      <br/>
+      <button class="btn btn-primary" type="submit" ng-click="cancel()">Submit</button>
+      <button class="btn btn-primary" ng-click="cancel()">Cancel</button>
+    </form>
+  </div>
+</div>

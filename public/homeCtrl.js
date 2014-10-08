@@ -10,14 +10,8 @@
           //   $('.modal-backdrop').remove();
           // }
 
-          $scope.login = function (username, password) {
-            console.log($('#myModal'));
-            if ( username === 'admin' && password === '1234') {
-                $location.path('/admin');
-            } else {
-                $scope.loginError = "Invalid username/password combination";
-            };
-          };
+
+
 
           $(".downBtn").click(function() {
               $('body').animate({
@@ -49,6 +43,16 @@
             }, function () {
               $log.info('Modal dismissed at: ' + new Date());
             });
+          };
+
+          $scope.login = function (username, password) {
+            console.log($('#myModal'));
+            if ( username === 'admin' && password === '1234') {
+                $location.path('/admin');
+
+            } else {
+                $scope.loginError = "Invalid username/password combination";
+            };
           };
 
         }]);

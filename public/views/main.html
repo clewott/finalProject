@@ -3,21 +3,16 @@
     <a href="#/companies/list"><button class="btn btn-success">Companies</button></a>
     <a href="#/jobs/list"><button class="btn btn-success">Jobs</button></a>
     <a href="#/events/list"><button class="btn btn-success">Events</button></a>
-    <a ng-click="isCollapsed = !isCollapsed"><button class="btn btn-success">Admin</button></a>
-    <div collapse="isCollapsed">
-      <div class="well well-lg">
-        <form ng-submit="login(username, password)">
-          <input type="text" ng-model="username" placeholder="Username">
-          <input type="password" ng-model="password" placeholder="Password">
-          <br/>
-          {{loginError}}  {{loggedUser}}
-          <br/>
-          <button class="btn btn-primary" type="submit" >Submit</button>
-          <button>Cancel</button>
-        </form>
+    <a ng-click="open()"><button class="btn btn-success">Admin</button>
+      <div id="myModal">
+        <script type="text/ng-template" id="main.html">
+          <div class="modal-body">
+
+          </div>
+        </script>
       </div>
-    </div>
-  </div>
+    </div></a>
+
 
   <div class="logoDiv">
     <img class="logo" src="../images/TechConnectLogo_2.svg" alt="">
@@ -29,7 +24,7 @@
 
 <div class="aboutTC">
   <h1>About Tech Connect</h1>
-  <p>Tech Connect is a website where everyone looking to work in the Charleston area can come to find great companies, see if they are hiring, and find events that are going on around the Lowcountry!</p>
+  <p>TechConnect is the one-stop-shop for information regarding the Charleston tech community. It features job opportunities, highlights Charleston tech companies, and advertises opportunities for professionals to collaborate and connect.</p>
 </div>
 
 <div id="mainMap" class="localMap">
@@ -54,22 +49,3 @@
 <footer class="mainFooter">
   © 2014 Site by Chris Otten. All rights reserved.
 </footer>
-
-<div>
-    <script type="text/ng-template" id="main.html">
-        <div class="modal-header">
-            <h3 class="modal-title">I am a modal!</h3>
-        </div>
-        <div class="modal-body">
-
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" ng-click="ok()">OK</button>
-            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-        </div>
-    </script>
-
-    <button class="btn btn-default" ng-click="open()">Open me!</button>
-    <button class="btn btn-default" ng-click="open('lg')">Large modal</button>
-    <button class="btn btn-default" ng-click="open('sm')">Small modal</button>
-</div>
