@@ -1,5 +1,16 @@
+$primary-blue: #2A6496;
+$grey-background: #f2f2f2;
+$opaque-background: rgba(42,100,150,0.5);
+$hiring-color-main: #3D8B37;
+$hiring-hover-color: green;
+$light-text: white;
+$dark-text: black;
+$create-form-background: rgba(250, 250, 250, 0.8);
+$logo-background: rgba(250, 250, 250, 0.5);
+
+
 body {
-  background-color: #f2f2f2;
+  background-color: $grey-background;
   margin:0px;
   padding: 0px;
   header {
@@ -37,25 +48,12 @@ body {
     vertical-align: top;
     .eachCompany {
       position: relative;
-      background-color: rgba(42,100,150,0.5);
+      background-color: $opaque-background;
       margin: 5px 10px;
       padding: 5px 10px;
       border-radius: 5px;
       h2 {
         margin-top: 10px;
-      }
-      .hiring {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 2em;
-        a {
-          color: #3D8B37;
-          text-decoration: none;
-        }
-        a:hover {
-          color: green;
-        }
       }
     }
   }
@@ -69,21 +67,21 @@ body {
 }
 
 .btn {
-  background-color: #2A6496;
-  color: white;
-  border: 1px solid #2A6496;
+  background-color: $primary-blue;
+  color: $light-text;
+  border: 1px solid $primary-blue;
 }
 
 .btn:hover {
-  background-color: #f2f2f2;
-  color: black;
-  border: 1px solid #2A6496;
+  background-color: $grey-background;
+  color: $dark-text;
+  border: 1px solid $primary-blue;
 }
 
 .createCompany, .createJob, .editCompany, .editJob {
   text-align: center;
   font-size: 1.5em;
-  background-color: rgba(42,100,150,0.5);
+  background-color: $opaque-background;
   width:40%;
   margin-left: auto;
   margin-right: auto;
@@ -98,7 +96,7 @@ body {
       width: 90%;
       border-radius: 5px;
       border: 1px solid grey;
-      background-color: rgba(250, 250, 250, 0.8);
+      background-color: $create-form-background;
     }
   }
 }
@@ -120,8 +118,8 @@ body {
       text-decoration: none;
     }
     button:hover {
-      background-color: white;
-      color: black;
+      background-color: $light-text;
+      color: $dark-text;
     }
   }
   .logoDiv {
@@ -130,7 +128,7 @@ body {
     img {
       margin-top: 75px;
       height: 200px;
-      background-color: rgba(250, 250, 250, 0.5);
+      background-color: $logo-background;
       padding: 5px;
       border-radius: 5px;
       @media (max-width: 600px) {
@@ -151,16 +149,16 @@ body {
     border-radius: 100%;
     background-color: #3B83BE;
     border: 1px solid #3B83BE;
-    color: white;
+    color: $light-text;
     width: 60px;
     @media (max-width: 1250px) {
       top: 94%;
     }
   }
   button:hover {
-    background-color: #2A6496;
-    color: white;
-    border: 1px solid #2A6496;
+    background-color: $primary-blue;
+    color: $light-text;
+    border: 1px solid $primary-blue;
   }
 }
 
@@ -168,8 +166,8 @@ body {
   text-align: center;
   padding-top: 70px;
   padding-bottom: 90px;
-  background-color: #f2f2f2;
-  color: #2A6496;
+  background-color: $grey-background;
+  color: $primary-blue;
   p {
     font-size: 2em;
   }
@@ -198,7 +196,7 @@ body {
     border-radius: 5px;
     padding: 10px;
     text-align: center;
-    color: #2A6496;
+    color: $primary-blue;
   }
   @media (max-width: 1100px) {
     p {
@@ -225,19 +223,19 @@ body {
 .jobsAndEvents {
   padding: 50px 0px;
   width: 100%;
-  background-color: #f2f2f2;
-  color: #2A6496;
+  background-color: $grey-background;
+  color: $primary-blue;
   section {
     text-align:center;
     .mainJobs {
       width: 40%;
       display: inline-block;
       margin-right: 10px;
-      border: 2px solid #2A6496;
+      border: 2px solid $primary-blue;
       border-radius: 5px;
       padding-bottom: 10px;
-      background-color: #f2f2f2;
-      color: #2A6496;
+      background-color: $grey-background;
+      color: $primary-blue;
       font-size: 1.5em;
       @media (max-width: 650px) {
         display: block;
@@ -249,18 +247,18 @@ body {
         margin-top:10px;
       }
       .btn {
-        border: 1px solid #f2f2f2;
+        border: 1px solid $grey-background;
       }
     }
     .mainEvents {
       width: 40%;
       display: inline-block;
       margin-left: 10px;
-      border: 2px solid #2A6496;
+      border: 2px solid $primary-blue;
       border-radius: 5px;
       padding-bottom: 10px;
-      background-color: #f2f2f2;
-      color: #2A6496;
+      background-color: $grey-background;
+      color: $primary-blue;
       font-size: 1.5em;
       vertical-align: top;
       @media (max-width: 650px) {
@@ -274,7 +272,7 @@ body {
         margin-top:10px;
       }
       .btn {
-        border: 1px solid #f2f2f2;
+        border: 1px solid $grey-background;
       }
     }
   }
@@ -282,8 +280,8 @@ body {
 
 .mainFooter {
   text-align:center;
-  background-color: #f2f2f2;
-  color: #2A6496;
+  background-color: $grey-background;
+  color: $primary-blue;
 }
 
 .angular-google-map-container {
@@ -296,7 +294,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #2A6496;
+  color: $primary-blue;
   #map {
     height: 550px;
   }
@@ -305,7 +303,7 @@ body {
 .allCompanies {
   .eachCompany {
     position: relative;
-    background-color: rgba(42,100,150,0.5);
+    background-color: $opaque-background;
     margin: 5px 10px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -318,7 +316,7 @@ body {
 .userCompanies {
   .userCompany {
     position: relative;
-    background-color: rgba(42,100,150,0.5);
+    background-color: $opaque-background;
     margin-top: 5px;
     padding: 5px 10px;
     border-radius: 5px;
@@ -331,11 +329,11 @@ body {
     .hiring {
       font-size: 1em;
       a {
-        color: #3D8B37;
+        color: $hiring-color-main;
         text-decoration: none;
       }
       a:hover {
-        color: green;
+        color: $hiring-hover-color;
       }
     }
   }
@@ -343,7 +341,7 @@ body {
 
 .eachJob {
   position: relative;
-  background-color: rgba(42,100,150,0.5);
+  background-color: $opaque-background;
   margin: 5px 10px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -355,7 +353,7 @@ body {
 
 .userJob {
   position: relative;
-  background-color: rgba(42,100,150,0.5);
+  background-color: $opaque-background;
   margin-top: 5px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -408,25 +406,25 @@ body {
   text-align: center;
   font-size: 2em;
   span {
-    color: #2A6496;
+    color: $primary-blue;
   }
   input {
     border-radius: 5px;
     border: 1px solid #3B83BE;
-    background-color: #f2f2f2;
-    color: black;
+    background-color: $grey-background;
+    color: $dark-text;
   }
 }
 
 /* Calendar */
 .well {
-  background-color: rgba(42,100,150,0.6);
+  background-color: $opaque-background;
   border-radius: 5px;
   width: 100%;
 }
 
 .fc-toolbar {
-  color: #2A6496;
+  color: $primary-blue;
 }
 
 
@@ -457,5 +455,5 @@ body {
 }
 
 .well-lg {
-  background-color: rgba(42,100,150,0.6);
+  background-color: $opaque-background;
 }
