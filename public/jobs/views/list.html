@@ -1,8 +1,8 @@
 <header>
   <img class="pageLogo" src="../images/TechConnectLogo_2.svg" alt="">
-  <a href="#/"><button class="btn btn-danger">Home</button></a>
-  <a href="#/companies/list"><button class="btn btn-danger">Companies</button></a>
-  <a href="#/events/list"><button class="btn btn-danger">Events</button></a>
+  <a href="#/"><button class="btn navBtn btn-danger">Home</button></a>
+  <a href="#/companies/list"><button class="btn navBtn btn-danger">Companies</button></a>
+  <a href="#/events/list"><button class="btn navBtn btn-danger">Events</button></a>
   <ul class="jobsList">
     <li class="searchData"><span>Search Jobs: </span><input ng-model="query"></li>
     <li class="searchData">
@@ -22,7 +22,7 @@
     <h2>{{job.title}}</h2>
     <p>Company: {{job.company}}</p>
     <p>Job URL: <a ng-href="http://{{job.url}}" target="_blank">{{job.url}}</a></p>
-    <p>Contact Email Address: {{job.email}}</p>
+    <p>Contact Email Address: <a href="mailTo:{{job.email}}">{{job.email}}</a></p>
     <a href="#/jobs/list/{{job._id}}"><button class="btn btn-success">Learn More About {{job.title}}</button></a>
   </div>
 </section>

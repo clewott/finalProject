@@ -14,6 +14,9 @@ body {
   margin:0px;
   padding: 0px;
   font-family: 'News Cycle', sans-serif;
+  a {
+    color: $primary-blue;
+  }
   header {
     position: relative;
     text-align: right;
@@ -28,6 +31,10 @@ body {
   .adminHeader {
     text-align: center;
   }
+}
+
+.navBtn {
+  font-size: 1.3em;
 }
 
 .container {
@@ -121,6 +128,9 @@ body {
     text-align: right;
     a {
       text-decoration: none;
+    }
+    button {
+      font-size: 1.3em;
     }
     button:hover {
       background-color: $light-text;
@@ -357,6 +367,10 @@ body {
       }
     }
   }
+  .userCompany:hover {
+    width: 83%;
+    padding: 10px;
+  }
 }
 
 .eachJob {
@@ -403,6 +417,10 @@ body {
     right: 80px;
     max-height: 200px;
   }
+}
+.userJob:hover {
+  width: 83%;
+  padding: 10px;
 }
 
 .singleJob {

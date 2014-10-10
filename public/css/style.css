@@ -3,6 +3,8 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'News Cycle', sans-serif; }
+  body a {
+    color: #2A6496; }
   body header {
     position: relative;
     text-align: right;
@@ -14,6 +16,9 @@ body {
       height: 75px; }
   body .adminHeader {
     text-align: center; }
+
+.navBtn {
+  font-size: 1.3em; }
 
 .container {
   margin: 0px;
@@ -91,6 +96,8 @@ body {
     text-align: right; }
     .mainWrapper .admin a {
       text-decoration: none; }
+    .mainWrapper .admin button {
+      font-size: 1.3em; }
     .mainWrapper .admin button:hover {
       background-color: white;
       color: black; }
@@ -284,6 +291,9 @@ body {
       text-decoration: none; }
     .userCompanies .userCompany .hiring a:hover {
       color: green; }
+.userCompanies .userCompany:hover {
+  width: 83%;
+  padding: 10px; }
 
 .eachJob {
   position: relative;
@@ -320,6 +330,10 @@ body {
     top: 20px;
     right: 80px;
     max-height: 200px; }
+
+.userJob:hover {
+  width: 83%;
+  padding: 10px; }
 
 .singleJob {
   margin-top: 60px; }

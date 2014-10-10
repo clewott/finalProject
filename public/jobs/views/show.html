@@ -1,9 +1,9 @@
 <header>
   <img class="pageLogo" src="../images/TechConnectLogo_2.svg" alt="">
-  <a href="#/"><button class="btn btn-danger">Home</button></a>
-  <a href="#/companies/list"><button class="btn btn-danger">Companies</button></a>
-  <a href="#/jobs/list"><button class="btn btn-danger">All Jobs</button></a>
-  <a href="#/events/list"><button class="btn btn-danger">Events</button></a>
+  <a href="#/"><button class="btn navBtn btn-danger">Home</button></a>
+  <a href="#/companies/list"><button class="btn navBtn btn-danger">Companies</button></a>
+  <a href="#/jobs/list"><button class="btn navBtn btn-danger">All Jobs</button></a>
+  <a href="#/events/list"><button class="btn navBtn btn-danger">Events</button></a>
 </header>
 
 <div class="userJob singleJob">
@@ -13,7 +13,7 @@
   <p>{{job.company}}</p>
   <img src="{{job.logo}}" alt="">
   <h4>Contact Email Address:</h4>
-  <p>{{job.email}}</p>
+  <a href="mailTo:{{job.email}}">{{job.email}}</a>
   <h4>Description:</h4>
   <p>{{job.description}}</p>
   <p id="applyNow"><a href="http://{{job.url}}" target="_blank"><button class="btn btn-success btn-lg">Like This Job? Apply Now!</button></a></p>
