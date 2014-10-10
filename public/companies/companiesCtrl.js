@@ -16,7 +16,6 @@
 
             $scope.createCompany = function (company) {
                 geocoder.geocode({ 'address': company.location }, function(results, status) {
-                  console.log(results[0].geometry);
                   company.geo = {
                     lat: results[0].geometry.location.k,
                     lng: results[0].geometry.location.B
@@ -30,7 +29,6 @@
             };
 
             function createMarkers(companies) {
-              console.log(companies);
               for(var i = 0; i< companies.length; i++) {
                 var latLong = new google.maps.LatLng(companies[i].geo.lat,companies[i].geo.lng);
                 var marker = new google.maps.Marker(
@@ -45,9 +43,7 @@
             };
 
             $scope.editCompany = function (company) {
-                console.log(company);
                 geocoder.geocode({ 'address': company.location }, function(results, status) {
-                  console.log(results[0].geometry);
                   company.geo = {
                     lat: results[0].geometry.location.k,
                     lng: results[0].geometry.location.B
@@ -62,7 +58,6 @@
 
             $scope.deleteCompany = function (company) {
                 companiesSvc.deleteCompany(company);
-                  console.log("company deleted");
                   $location.path('/admin');
             };
 

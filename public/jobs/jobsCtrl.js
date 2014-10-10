@@ -26,7 +26,6 @@
           $scope.deleteJob = function (job) {
             jobsSvc.deleteJob(job);
             $location.path('/admin');
-            console.log("job deleted");
           };
 
           $rootScope.$on("job:added", function() {
