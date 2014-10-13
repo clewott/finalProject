@@ -20,21 +20,38 @@ body {
   header {
     position: relative;
     text-align: right;
-    margin-top: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     .pageLogo {
       position: absolute;
       left: 10px;
       height: 75px;
+      @media (max-width: 650px) {
+        display: none;
+      }
+    }
+    a {
+      .navBtn {
+        margin-top: 5px;
+        font-size: 1.3em;
+        @media (max-width: 650px) {
+          margin: 0px;
+          padding: 0px;
+          width: 100%;
+          font-size: 1.7em;
+          margin-top: 10px;
+          border-radius: 0px;
+        }
+      }
+    }
+    @media (max-width: 650px) {
+      margin: 0px;
+      padding: 0px;
+      margin-bottom: 20px;
     }
   }
   .adminHeader {
     text-align: center;
   }
-}
-
-.navBtn {
-  font-size: 1.3em;
 }
 
 .container {
@@ -122,21 +139,6 @@ body {
   @media (min-height: 618px) {
     height: 650px;
   }
-  .admin {
-    padding-top: 5px;
-    padding-right: 5px;
-    text-align: right;
-    a {
-      text-decoration: none;
-    }
-    button {
-      font-size: 1.3em;
-    }
-    button:hover {
-      background-color: $light-text;
-      color: $dark-text;
-    }
-  }
   .logoDiv {
     text-align: center;
     height: 600px;
@@ -146,7 +148,7 @@ body {
       background-color: $logo-background;
       padding: 5px;
       border-radius: 5px;
-      @media (max-width: 600px) {
+      @media (max-width: 650px) {
         height: 150px;
       }
       @media (max-width: 450px) {
@@ -168,6 +170,9 @@ body {
     width: 60px;
     @media (max-width: 1250px) {
       top: 93%;
+    }
+    @media (max-width: 650px) {
+      display: none;
     }
     @media (min-height: 618px) {
       top: 94%;
@@ -327,7 +332,11 @@ body {
   color: $primary-blue;
   #map {
     height: 550px;
+    @media (max-width: 650px) {
+      height: 400px;
+    }
   }
+
 }
 
 .allCompanies {
@@ -394,13 +403,21 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
   .xBtn {
     position: absolute;
     top: 10px;
     right: 10px;
+    @media (max-width: 650px) {
+      top: 5px;
+      right: 5px;
+    }
     a {
       button {
         font-size: 2em;
+        @media (max-width: 650px) {
+          font-size: 1em;
+        }
       }
     }
   }
@@ -416,6 +433,9 @@ body {
     top: 20px;
     right: 80px;
     max-height: 200px;
+    @media (max-width: 650px) {
+      display: none;
+    }
   }
 }
 .userJob:hover {
@@ -425,6 +445,7 @@ body {
 
 .singleJob {
   margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .eachAdminJob {
@@ -436,6 +457,9 @@ body {
   text-align: center;
   li {
     display: inline-block;
+  }
+  @media (max-width: 650px) {
+    display: none;
   }
 }
 
@@ -451,6 +475,9 @@ body {
     border: 1px solid #3B83BE;
     background-color: $grey-background;
     color: $dark-text;
+  }
+  @media (max-width: 650px) {
+    display: none;
   }
 }
 

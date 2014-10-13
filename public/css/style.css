@@ -8,17 +8,32 @@ body {
   body header {
     position: relative;
     text-align: right;
-    margin-top: 10px;
-    margin-right: 10px; }
+    margin-right: 5px; }
     body header .pageLogo {
       position: absolute;
       left: 10px;
       height: 75px; }
+      @media (max-width: 650px) {
+        body header .pageLogo {
+          display: none; } }
+    body header a .navBtn {
+      margin-top: 5px;
+      font-size: 1.3em; }
+      @media (max-width: 650px) {
+        body header a .navBtn {
+          margin: 0px;
+          padding: 0px;
+          width: 100%;
+          font-size: 1.7em;
+          margin-top: 10px;
+          border-radius: 0px; } }
+    @media (max-width: 650px) {
+      body header {
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: 20px; } }
   body .adminHeader {
     text-align: center; }
-
-.navBtn {
-  font-size: 1.3em; }
 
 .container {
   margin: 0px;
@@ -90,17 +105,6 @@ body {
   @media (min-height: 618px) {
     .mainWrapper {
       height: 650px; } }
-  .mainWrapper .admin {
-    padding-top: 5px;
-    padding-right: 5px;
-    text-align: right; }
-    .mainWrapper .admin a {
-      text-decoration: none; }
-    .mainWrapper .admin button {
-      font-size: 1.3em; }
-    .mainWrapper .admin button:hover {
-      background-color: white;
-      color: black; }
   .mainWrapper .logoDiv {
     text-align: center;
     height: 600px; }
@@ -110,7 +114,7 @@ body {
       background-color: rgba(250, 250, 250, 0.5);
       padding: 5px;
       border-radius: 5px; }
-      @media (max-width: 600px) {
+      @media (max-width: 650px) {
         .mainWrapper .logoDiv img {
           height: 150px; } }
       @media (max-width: 450px) {
@@ -131,6 +135,9 @@ body {
     @media (max-width: 1250px) {
       .mainWrapper .downBtn {
         top: 93%; } }
+    @media (max-width: 650px) {
+      .mainWrapper .downBtn {
+        display: none; } }
     @media (min-height: 618px) {
       .mainWrapper .downBtn {
         top: 94%; } }
@@ -263,6 +270,9 @@ body {
   color: #2A6496; }
   .theMap #map {
     height: 550px; }
+    @media (max-width: 650px) {
+      .theMap #map {
+        height: 400px; } }
 
 .allCompanies .eachCompany {
   position: relative;
@@ -313,13 +323,21 @@ body {
   border-radius: 5px;
   width: 80%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  overflow: auto; }
   .userJob .xBtn {
     position: absolute;
     top: 10px;
     right: 10px; }
+    @media (max-width: 650px) {
+      .userJob .xBtn {
+        top: 5px;
+        right: 5px; } }
     .userJob .xBtn a button {
       font-size: 2em; }
+      @media (max-width: 650px) {
+        .userJob .xBtn a button {
+          font-size: 1em; } }
   .userJob h2 {
     margin-top: 10px;
     text-decoration: underline; }
@@ -330,13 +348,17 @@ body {
     top: 20px;
     right: 80px;
     max-height: 200px; }
+    @media (max-width: 650px) {
+      .userJob img {
+        display: none; } }
 
 .userJob:hover {
   width: 83%;
   padding: 10px; }
 
 .singleJob {
-  margin-top: 60px; }
+  margin-top: 60px;
+  margin-bottom: 20px; }
 
 .eachAdminJob {
   margin-top: 0px; }
@@ -346,6 +368,9 @@ body {
   text-align: center; }
   .jobsList li {
     display: inline-block; }
+  @media (max-width: 650px) {
+    .jobsList {
+      display: none; } }
 
 .searchData {
   margin-top: 50px;
@@ -358,6 +383,9 @@ body {
     border: 1px solid #3B83BE;
     background-color: #f2f2f2;
     color: black; }
+  @media (max-width: 650px) {
+    .searchData {
+      display: none; } }
 
 /* Calendar */
 .well {
