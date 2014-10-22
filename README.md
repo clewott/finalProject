@@ -1,1 +1,1 @@
-This is a Readme.  Come back here and fill this out.
+This is TechConnect.  TechConnect is my final project that I made for The Iron Yard Demo Day.  It is a Mean stack app that is built with AngularJS.  if you have any questions please feel free to email me at Christopher.R.Otten@gmail.com you can also view the live version at http://finalprojectcrotten.herokuapp.com/#/. 
